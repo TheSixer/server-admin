@@ -52,15 +52,15 @@ export default class Common {
    * @param ctx Context
    * 参数格式{file:File}
    */
-  @post('/upload/qiniu')
+  @post('/upload/qiniu', true)
   async uploadToQiniu(ctx: Context) {
     const file: any = ctx.request.files.file;
     const serverPath = path.join(__dirname, '../../uploads/')
     try {
       // 获取上传图片
       const result: any = await uploadFile(file);
-      const imgPath = path.join(serverPath, result.imgPath);
       // 上传到七牛
+      const imgPath = path.join(serverPath, result.imgPath);
       const qiniu: any = await upload2Qiniu(imgPath, result.imgKey);
       // 上存到七牛以后 删除本来的缓存图片
       removeTemImage(imgPath);

@@ -9341,3 +9341,672 @@
 
 [2021/04/03:08.02.19] INFO file -  select * from article order by create_time desc limit 0,10
 
+[2021/04/06:10.46.21] INFO file - ====== execute sql ======
+
+[2021/04/06:10.46.21] INFO file -  select count(*) as count from article
+
+[2021/04/06:10.46.21] INFO file - ====== execute sql ======
+
+[2021/04/06:10.46.21] INFO file -  select * from article order by create_time desc limit 0,10
+
+[2021/04/06:10.46.24] INFO file - ====== execute sql ======
+
+[2021/04/06:10.46.24] INFO file -  select count(*) as count from article
+
+[2021/04/06:10.46.24] INFO file - ====== execute sql ======
+
+[2021/04/06:10.46.24] INFO file -  select * from article order by create_time desc limit 0,10
+
+[2021/04/06:10.46.27] INFO file - ====== execute sql ======
+
+[2021/04/06:10.46.27] INFO file -  select count(*) as count from article
+
+[2021/04/06:10.46.27] INFO file - ====== execute sql ======
+
+[2021/04/06:10.46.27] INFO file -  select * from article order by create_time desc limit 0,10
+
+[2021/04/06:10.46.30] INFO file - ====== execute sql ======
+
+[2021/04/06:10.46.30] INFO file -  select count(*) as count from article
+
+[2021/04/06:10.46.30] INFO file - ====== execute sql ======
+
+[2021/04/06:10.46.30] INFO file -  select * from article order by create_time desc limit 0,10
+
+[2021/04/06:16.34.18] INFO file - ====== execute sql ======
+
+[2021/04/06:16.34.18] INFO file - insert into article set ? {
+  title: '使用craco 配置 React + Typescript 的开发环境',
+  type: '1',
+  tags: '["React","TypeScript","craco"]',
+  content: 'React 是一个用于构建用户界面的 JAVASCRIPT 库，也是目前最火的前端开发框架之一。React 主要用于构建UI，拥有较高的性能，代码逻辑非常简单，受到越来越多的人关注和喜爱。\n' +
+    '\n' +
+    'Typescript 是 JavaScript 的一个超集，支持 ECMAScript 6 标准。主要用于开发大型应用，其编写规范，便于维护的特点受到很多前端开发者的喜爱，它可以编译成纯 JavaScript，编译出来的 JavaScript 可以运行在任何浏览器上。\n' +
+    '\n' +
+    '本文主要介绍如何搭建和配置一个 React + Typescript 的基础项目框架。\n' +
+    '\n' +
+    '### 初始化\n' +
+    '\n' +
+    '初始化一个 React + Typescript 项目最简便的方法就是使用 create-react-app 的template 模板，命令如下：\n' +
+    '\n' +
+    '```\n' +
+    '$ npx create-react-app my-app --template typescript\n' +
+    '$ # 或者\n' +
+    '$ yarn create react-app my-app --template typescript\n' +
+    '```\n' +
+    '如果是在已创建的React的项目中添加 Typescript，可以用如下命令：\n' +
+    '\n' +
+    '```\n' +
+    '$ npm install --save typescript @types/node @types/react @types/react-dom @types/jest\n' +
+    '$ # 或者\n' +
+    '$ yarn add typescript @types/node @types/react @types/react-dom @types/jest\n' +
+    '```\n' +
+    '然后将项目下的js文件重命名为 TypeScript 文件（例如 src/index.js 重命名为 src/index.tsx ）并重新启动。项目结构如下：\n' +
+    '\n' +
+    '![file](http://ots-wiki.wow/wp-content/uploads/2021/04/image-1617695280001.png)\n' +
+    '\n' +
+    '修改 `tsconfig.json` 文件\n' +
+    '\n' +
+    '```\n' +
+    '{\n' +
+    '  "compilerOptions": {\n' +
+    '    "target": "es5",\n' +
+    '    "lib": [\n' +
+    '      "dom",\n' +
+    '      "dom.iterable",\n' +
+    '      "esnext"\n' +
+    '    ],\n' +
+    '    "allowJs": true,\n' +
+    '    "skipLibCheck": true,\n' +
+    '    "esModuleInterop": true,\n' +
+    '    "allowSyntheticDefaultImports": true,\n' +
+    '    "strict": true,\n' +
+    '    "forceConsistentCasingInFileNames": true,\n' +
+    '    "module": "esnext",\n' +
+    '    "moduleResolution": "node",\n' +
+    '    "resolveJsonModule": true,\n' +
+    '    "noEmit": true,\n' +
+    '    "jsx": "react-jsx",\n' +
+    '    "sourceMap": true,\n' +
+    '    "declaration": true,\n' +
+    '    "noUnusedLocals": true,\n' +
+    '    "noUnusedParameters": true,\n' +
+    '    "experimentalDecorators": true,\n' +
+    '    "incremental": true,\n' +
+    '    "noFallthroughCasesInSwitch": true,\n' +
+    '    "isolatedModules": true\n' +
+    '  },\n' +
+    '  "include": [\n' +
+    '    "src/**/*"\n' +
+    '  ],\n' +
+    '  "exclude": [\n' +
+    '    "node_modules",\n' +
+    '    "build"\n' +
+    '  ]\n' +
+    '}\n' +
+    '```\n' +
+    '\n' +
+    '##### 配置 eslint\n' +
+    '\n' +
+    '安装eslint\n' +
+    '\n' +
+    '```\n' +
+    '$ npm i eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-react -D\n' +
+    '```\n' +
+    '在根目录下创建一个 `.eslintrc.js` 文件，并添加如下内容：\n' +
+    '\n' +
+    '```\n' +
+    'module.exports =  {\n' +
+    "  parser:  '@typescript-eslint/parser',  // 指定ESLint解析器\n" +
+    '  extends:  [\n' +
+    "    'plugin:react/recommended',  // 使用来自 @eslint-plugin-react 的推荐规则\n" +
+    "    'plugin:@typescript-eslint/recommended',  // 使用来自@typescript-eslint/eslint-plugin的推荐规则\n" +
+    '  ],\n' +
+    '  parserOptions:  {\n' +
+    '  ecmaVersion:  2018,  // 允许解析最新的 ECMAScript 特性\n' +
+    "  sourceType:  'module',  // 允许使用 import\n" +
+    '  ecmaFeatures:  {\n' +
+    '    jsx:  true,  // 允许对JSX进行解析\n' +
+    '  },\n' +
+    '  },\n' +
+    '  rules:  {\n' +
+    '    // 自定义规则\n' +
+    '    // e.g. "@typescript-eslint/explicit-function-return-type": "off",\n' +
+    '  },\n' +
+    '  settings:  {\n' +
+    '    react:  {\n' +
+    "      version:  'detect',  // 告诉 eslint-plugin-react 自动检测 React 的版本\n" +
+    '    },\n' +
+    '  },\n' +
+    '};\n' +
+    '```\n' +
+    '\n' +
+    '#### 添加 Prettier 依赖\n' +
+    '\n' +
+    '```\n' +
+    '$ npm i prettier eslint-config-prettier eslint-plugin-prettier -D\n' +
+    '```\n' +
+    '\n' +
+    '在根目录下创建一个 `.prettierrc.js` 文件，并添加如下内容：\n' +
+    '\n' +
+    '```\n' +
+    'module.exports = {\n' +
+    '  "semi": true,\n' +
+    '  "singleQuote": true,\n' +
+    '  "trailingComma": "es5",\n' +
+    '  "tabWidth": 2,\n' +
+    '  "endOfLine": "auto",\n' +
+    '  "useTabs": false\n' +
+    '};\n' +
+    '```\n' +
+    '\n' +
+    '更新 `.eslintrc.js` 文件：\n' +
+    '\n' +
+    '```\n' +
+    'module.exports = {\n' +
+    '  env: {\n' +
+    '    browser: true,\n' +
+    '    es6: true,\n' +
+    '  },\n' +
+    '  extends: [\n' +
+    "    'plugin:react/recommended',\n" +
+    "    'plugin:@typescript-eslint/recommended',\n" +
+    "    'airbnb',\n" +
+    "    'airbnb/hooks',\n" +
+    "    'prettier/@typescript-eslint',\n" +
+    "    'plugin:prettier/recommended',\n" +
+    "    'plugin:jest/recommended',\n" +
+    '  ],\n' +
+    "  parser: '@typescript-eslint/parser',\n" +
+    '  parserOptions: {\n' +
+    '    ecmaFeatures: {\n' +
+    '      jsx: true,\n' +
+    '      tsx: true,\n' +
+    '      modules: true,\n' +
+    '    },\n' +
+    '    ecmaVersion: 2020,\n' +
+    "    sourceType: 'module',\n" +
+    '  },\n' +
+    "  plugins: ['react', '@typescript-eslint', 'jest'],\n" +
+    '  rules: {\n' +
+    "    'react/jsx-filename-extension': [\n" +
+    '      2,\n' +
+    '      {\n' +
+    "        extensions: ['.js', '.jsx', 'ts', 'tsx'],\n" +
+    '      },\n' +
+    '    ],\n' +
+    "    'no-use-before-define': 'off',\n" +
+    "    '@typescript-eslint/no-use-before-define': ['error'],\n" +
+    "    '@typescript-eslint/explicit-module-boundary-types': 'off',\n" +
+    "    '@typescript-eslint/no-explicit-any': 'off',\n" +
+    "    '@typescript-eslint/explicit-function-return-type': [\n" +
+    '      0,\n' +
+    '      {\n' +
+    '        allowTypedFunctionExpressions: true,\n' +
+    '      },\n' +
+    '    ],\n' +
+    "    'react/state-in-constructor': 0,\n" +
+    "    'react/no-array-index-key': 0,\n" +
+    "    'import/extensions': [\n" +
+    '      2,\n' +
+    "      'ignorePackages',\n" +
+    '      {\n' +
+    "        ts: 'never',\n" +
+    "        tsx: 'never',\n" +
+    "        json: 'never',\n" +
+    "        js: 'never',\n" +
+    '      },\n' +
+    '    ],\n' +
+    "    'jsx-a11y/click-events-have-key-events': 0,\n" +
+    "    'jsx-a11y/no-static-element-interactions': 0,\n" +
+    "    'react/jsx-props-no-spreading': 0,\n" +
+    "    'no-unused-expressions': 0,\n" +
+    "    'jsx-a11y/anchor-is-valid': 0,\n" +
+    "    'no-nested-ternary': 0,\n" +
+    "    'react/static-property-placement': 0,\n" +
+    "    'object-curly-newline': 0,\n" +
+    '  },\n' +
+    '  settings: {\n' +
+    "    'import/resolver': {\n" +
+    '      node: {\n' +
+    "        extensions: ['.js', '.jsx', '.ts', '.tsx'],\n" +
+    '      },\n' +
+    '      typescript: {\n' +
+    "        project: './tsconfig.json',\n" +
+    '      },\n' +
+    '    },\n' +
+    '  },\n' +
+    '  overrides: [\n' +
+    '    {\n' +
+    "      files: ['**/*.spec.js', '**/*.spec.jsx'],\n" +
+    '      env: {\n' +
+    '        jest: true,\n' +
+    '      },\n' +
+    '    },\n' +
+    '  ],\n' +
+    '};\n' +
+    '```\n' +
+    '\n' +
+    '### 配置craco\n' +
+    '\n' +
+    '当我们在React项目下想修改webpack的配置时，我们需要执行 `npm run eject` 来曝露webpack的配置项，那如何在不通过 `npm run eject` 进行webpack配置呢？\n' +
+    '\n' +
+    'craco就可以帮助我们做到这一点。执行安装craco\n' +
+    '\n' +
+    '```\n' +
+    '$ yarn add  @cracco/craco\n' +
+    '$ # 或者\n' +
+    '$ npm install  @craco/craco --save\n' +
+    '```\n' +
+    '在项目根目录下创建 `craco.config.js` 文件\n' +
+    '\n' +
+    '![file](http://ots-wiki.wow/wp-content/uploads/2021/04/image-1617695338253.png)\n' +
+    '\n' +
+    '修改 `package.json` 文件\n' +
+    '\n' +
+    '```\n' +
+    '"scripts": {\n' +
+    '-   "start": "react-scripts start",\n' +
+    '+   "start": "craco start",\n' +
+    '-   "build": "react-scripts build",\n' +
+    '+   "build": "craco build"\n' +
+    '-   "test": "react-scripts test",\n' +
+    '+   "test": "craco test"\n' +
+    '}\n' +
+    '```\n' +
+    '安装 `compression-webpack-plugin` 和 `webpack-bundle-analyzer` ，\n' +
+    '```\n' +
+    'npm install compression-webpack-plugin --save //打包build生成gizp压缩文件\n' +
+    'npm install webpack-bundle-analyzer --save //分析打包后的文件体积\n' +
+    '```\n' +
+    '\n' +
+    '在 `craco.config.js` 文件中加入如下内容：\n' +
+    '\n' +
+    '```\n' +
+    "const CompressionWebpackPlugin = require('compression-webpack-plugin');\n" +
+    "const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;\n" +
+    "const webpack = require('webpack')\n" +
+    'module.exports = {\n' +
+    '  webpack: {\n' +
+    '    plugins: [\n' +
+    '      // 打压缩包\n' +
+    '      new CompressionWebpackPlugin({\n' +
+    "        algorithm: 'gzip',\n" +
+    '        test: new RegExp(\n' +
+    "          '\\\\.(' +\n" +
+    "          ['js', 'css'].join('|') +\n" +
+    "          ')$'\n" +
+    '        ),\n' +
+    '        threshold: 1024,\n' +
+    '        minRatio: 0.8\n' +
+    '      }),\n' +
+    '      // 开启 BundleAnalyzerPlugin \n' +
+    '      new BundleAnalyzerPlugin(),\n' +
+    '      new webpack.IgnorePlugin(/^\\.\\/locale$/, /moment$/),\n' +
+    '    ]\n' +
+    '  }\n' +
+    '};\n' +
+    '```\n' +
+    '\n' +
+    '**compression-webpack-plugin 打包生成的 .gz 后缀的文件需要服务器配置支持。**\n' +
+    '\n' +
+    '##### 配置 craco 支持 ant design 、less 和 css module\n' +
+    '\n' +
+    '```\n' +
+    '$ npm i craco-antd craco-less craco-alias -S\n' +
+    '$ npm i @babel/plugin-proposal-decorators -D\n' +
+    '```\n' +
+    '更新 `craco.config.js` 文件\n' +
+    '\n' +
+    '```\n' +
+    "const CompressionWebpackPlugin = require('compression-webpack-plugin');\n" +
+    "const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;\n" +
+    "const webpack = require('webpack');\n" +
+    "const CracoAntDesignPlugin = require('craco-antd');\n" +
+    "const CracoAlias = require('craco-alias');\n" +
+    "const CracoLessPlugin = require('craco-less');\n" +
+    '\n' +
+    "const path = require('path');\n" +
+    '\n' +
+    'module.exports = {\n' +
+    '  webpack: {\n' +
+    '    plugins: [\n' +
+    '      // 打压缩包\n' +
+    '      new CompressionWebpackPlugin({\n' +
+    "        algorithm: 'gzip',\n" +
+    '        test: new RegExp(\n' +
+    "          '\\\\.(' +\n" +
+    "          ['js', 'css'].join('|') +\n" +
+    "          ')$'\n" +
+    '        ),\n' +
+    '        threshold: 1024,\n' +
+    '        minRatio: 0.8\n' +
+    '      }),\n' +
+    '      // 开启 BundleAnalyzerPlugin \n' +
+    '      new BundleAnalyzerPlugin(),\n' +
+    '      new webpack.IgnorePlugin(/^\\.\\/locale$/, /moment$/),\n' +
+    '    ]\n' +
+    '  },\n' +
+    '  plugins: [\n' +
+    '    {\n' +
+    '      plugin: CracoAntDesignPlugin,\n' +
+    '      options: {\n' +
+    '        lessLoaderOptions: {\n' +
+    '          lessOptions: {\n' +
+    '            javascriptEnabled: true,\n' +
+    '            sourceMap: false,\n' +
+    '          },\n' +
+    '        },\n' +
+    '        cssLoaderOptions: {\n' +
+    '          modules: {\n' +
+    "            localIdentName: '[local]_[hash:base64:5]',\n" +
+    '            // 回调必须返回 `local`，`global`，或者 `pure`\n' +
+    '            mode: (resourcePath) => {\n' +
+    '              if (/pure\\.(less|css)$/i.test(resourcePath)) {\n' +
+    "                return 'pure'\n" +
+    '              }\n' +
+    '\n' +
+    '              if (/(global)\\.(less|css)$/i.test(resourcePath)) {\n' +
+    "                return 'global'\n" +
+    '              }\n' +
+    '\n' +
+    '              if (/antd/i.test(resourcePath)) {\n' +
+    "                return 'global'\n" +
+    '              }\n' +
+    '\n' +
+    "              return 'local'\n" +
+    '            },\n' +
+    '          },\n' +
+    '        },\n' +
+    '        babelPluginImportOptions: {\n' +
+    "          libraryName: 'antd',\n" +
+    "          libraryDirectory: 'es',\n" +
+    '          style: true,\n' +
+    '        },\n' +
+    '      },\n' +
+    '    },\n' +
+    '    /* 支持less module */\n' +
+    '    {\n' +
+    '      plugin: CracoLessPlugin,\n' +
+    '      options: {\n' +
+    '        cssLoaderOptions: {\n' +
+    "          modules: { localIdentName: '[local]_[hash:base64:5]' },\n" +
+    '        },\n' +
+    '        modifyLessRule: function (lessRule, _context) {\n' +
+    '          lessRule.test = /\\.(module)\\.(less)$/;\n' +
+    "          lessRule.exclude = path.join(__dirname, 'node_modules');\n" +
+    '          return lessRule;\n' +
+    '        },\n' +
+    '      },\n' +
+    '    },\n' +
+    '    /* 别名设置 */\n' +
+    '    {\n' +
+    '      plugin: CracoAlias,\n' +
+    '      options: {\n' +
+    "        source: 'tsconfig',\n" +
+    "        baseUrl: './src',\n" +
+    "        tsConfigPath: './tsconfig.paths.json',\n" +
+    '      },\n' +
+    '    }\n' +
+    '  ],\n' +
+    '  babel: {\n' +
+    '    presets: [],\n' +
+    '    plugins: [\n' +
+    '      // AntDesign 按需加载\n' +
+    "      ['import', { libraryName: 'antd', libraryDirectory: 'es', style: 'css' }],\n" +
+    "      ['@babel/plugin-proposal-decorators', { legacy: true }]\n" +
+    '    ]\n' +
+    '  },\n' +
+    '};\n' +
+    '```\n' +
+    '\n' +
+    '以上就是使用craco 配置 React + Typescript 的一些基本使用方法，更多拓展方式会在以后的文章中更新。',
+  introduction: '使用craco 配置 React + Typescript 的开发环境',
+  images: '["www.baidu.com","www.qq.com"]',
+  create_time: 1617698058.921,
+  edit_time: 1617698058.921
+}
+
+[2021/04/06:16.34.23] INFO file - ====== execute sql ======
+
+[2021/04/06:16.34.23] INFO file -  select count(*) as count from article
+
+[2021/04/06:16.34.23] INFO file - ====== execute sql ======
+
+[2021/04/06:16.34.23] INFO file -  select * from article order by create_time desc limit 0,10
+
+[2021/04/06:17.39.41] ERROR file - TypeError: Cannot read property 'file' of undefined
+    at uploadToQiniu (E:\workspace\server-admin\src\routes\index.ts:57:41)
+    at dispatch (E:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (E:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at E:\workspace\server-admin\src\middleware\jwt.ts:39:11
+    at dispatch (E:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (E:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at E:\workspace\server-admin\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (E:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at E:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:36:12
+    at dispatch (E:\workspace\server-admin\node_modules\koa-router\lib\router.js:351:31)
+
+[2021/04/06:17.40.43] ERROR file - TypeError: Cannot read property 'file' of undefined
+    at uploadToQiniu (E:\workspace\server-admin\src\routes\index.ts:57:41)
+    at dispatch (E:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (E:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at E:\workspace\server-admin\src\middleware\jwt.ts:39:11
+    at dispatch (E:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (E:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at E:\workspace\server-admin\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (E:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at E:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:36:12
+    at dispatch (E:\workspace\server-admin\node_modules\koa-router\lib\router.js:351:31)
+
+[2021/04/06:17.51.34] INFO file - creating pool
+
+[2021/04/06:17.51.35] INFO file - === app server running on port 8080 ===
+
+[2021/04/06:17.51.48] ERROR file - TypeError: Cannot read property 'file' of undefined
+    at uploadToQiniu (E:\workspace\server-admin\src\routes\index.ts:57:41)
+    at dispatch (E:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (E:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at E:\workspace\server-admin\src\middleware\jwt.ts:39:11
+    at dispatch (E:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (E:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at E:\workspace\server-admin\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (E:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at E:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:36:12
+    at dispatch (E:\workspace\server-admin\node_modules\koa-router\lib\router.js:351:31)
+
+[2021/04/06:17.54.02] INFO file - creating pool
+
+[2021/04/06:17.54.02] INFO file - === app server running on port 8080 ===
+
+[2021/04/06:17.55.15] INFO file - creating pool
+
+[2021/04/06:17.55.15] INFO file - === app server running on port 8080 ===
+
+[2021/04/06:17.56.27] INFO file - creating pool
+
+[2021/04/06:17.56.27] INFO file - === app server running on port 8080 ===
+
+[2021/04/06:17.56.42] INFO file - creating pool
+
+[2021/04/06:17.56.43] INFO file - === app server running on port 8080 ===
+
+[2021/04/06:17.59.04] INFO file - creating pool
+
+[2021/04/06:17.59.05] INFO file - === app server running on port 8080 ===
+
+[2021/04/06:18.26.57] INFO file - ====== execute sql ======
+
+[2021/04/06:18.26.57] INFO file -  select count(*) as count from article
+
+[2021/04/06:18.26.57] INFO file - ====== execute sql ======
+
+[2021/04/06:18.26.57] INFO file -  select * from article order by create_time desc limit 0,10
+
+[2021/04/06:18.26.58] INFO file - ====== execute sql ======
+
+[2021/04/06:18.26.58] INFO file -  select count(*) as count from article
+
+[2021/04/06:18.26.58] INFO file - ====== execute sql ======
+
+[2021/04/06:18.26.58] INFO file -  select * from article order by create_time desc limit 0,10
+
+[2021/04/06:18.29.04] INFO file - ====== execute sql ======
+
+[2021/04/06:18.29.04] INFO file -  select count(*) as count from article
+
+[2021/04/06:18.29.04] INFO file - ====== execute sql ======
+
+[2021/04/06:18.29.04] INFO file -  select * from article order by create_time desc limit 0,10
+
+[2021/04/06:18.29.06] INFO file - ====== execute sql ======
+
+[2021/04/06:18.29.06] INFO file -  select count(*) as count from article
+
+[2021/04/06:18.29.06] INFO file - ====== execute sql ======
+
+[2021/04/06:18.29.06] INFO file -  select * from article order by create_time desc limit 0,10
+
+[2021/04/06:18.29.21] ERROR file - Error: bad content-type header, no multipart boundary
+    at IncomingForm._parseContentType (E:\workspace\server-admin\node_modules\formidable\lib\incoming_form.js:279:19)
+    at IncomingForm.writeHeaders (E:\workspace\server-admin\node_modules\formidable\lib\incoming_form.js:144:8)
+    at IncomingForm.parse (E:\workspace\server-admin\node_modules\formidable\lib\incoming_form.js:112:8)
+    at E:\workspace\server-admin\node_modules\koa-body\index.js:209:10
+    at new Promise (<anonymous>)
+    at formy (E:\workspace\server-admin\node_modules\koa-body\index.js:174:10)
+    at E:\workspace\server-admin\node_modules\koa-body\index.js:101:25
+    at dispatch (E:\workspace\server-admin\node_modules\koa-compose\index.js:42:32)
+    at cors (E:\workspace\server-admin\node_modules\koa2-cors\dist\index.js:91:15)
+    at dispatch (E:\workspace\server-admin\node_modules\koa-compose\index.js:42:32)
+
+[2021/04/06:18.30.22] INFO file - creating pool
+
+[2021/04/06:18.30.23] INFO file - === app server running on port 8080 ===
+
+[2021/04/06:18.30.27] ERROR file - Error: bad content-type header, no multipart boundary
+    at IncomingForm._parseContentType (E:\workspace\server-admin\node_modules\formidable\lib\incoming_form.js:279:19)
+    at IncomingForm.writeHeaders (E:\workspace\server-admin\node_modules\formidable\lib\incoming_form.js:144:8)
+    at IncomingForm.parse (E:\workspace\server-admin\node_modules\formidable\lib\incoming_form.js:112:8)
+    at E:\workspace\server-admin\node_modules\koa-body\index.js:209:10
+    at new Promise (<anonymous>)
+    at formy (E:\workspace\server-admin\node_modules\koa-body\index.js:174:10)
+    at E:\workspace\server-admin\node_modules\koa-body\index.js:101:25
+    at dispatch (E:\workspace\server-admin\node_modules\koa-compose\index.js:42:32)
+    at cors (E:\workspace\server-admin\node_modules\koa2-cors\dist\index.js:91:15)
+    at dispatch (E:\workspace\server-admin\node_modules\koa-compose\index.js:42:32)
+
+[2021/04/06:18.30.41] INFO file - creating pool
+
+[2021/04/06:18.30.41] INFO file - === app server running on port 8080 ===
+
+[2021/04/06:18.32.29] ERROR file - Error: bad content-type header, no multipart boundary
+    at IncomingForm._parseContentType (E:\workspace\server-admin\node_modules\formidable\lib\incoming_form.js:279:19)
+    at IncomingForm.writeHeaders (E:\workspace\server-admin\node_modules\formidable\lib\incoming_form.js:144:8)
+    at IncomingForm.parse (E:\workspace\server-admin\node_modules\formidable\lib\incoming_form.js:112:8)
+    at E:\workspace\server-admin\node_modules\koa-body\index.js:209:10
+    at new Promise (<anonymous>)
+    at formy (E:\workspace\server-admin\node_modules\koa-body\index.js:174:10)
+    at E:\workspace\server-admin\node_modules\koa-body\index.js:101:25
+    at dispatch (E:\workspace\server-admin\node_modules\koa-compose\index.js:42:32)
+    at cors (E:\workspace\server-admin\node_modules\koa2-cors\dist\index.js:91:15)
+    at dispatch (E:\workspace\server-admin\node_modules\koa-compose\index.js:42:32)
+
+[2021/04/07:09.33.04] ERROR file - Error: bad content-type header, no multipart boundary
+    at IncomingForm._parseContentType (E:\workspace\server-admin\node_modules\formidable\lib\incoming_form.js:279:19)
+    at IncomingForm.writeHeaders (E:\workspace\server-admin\node_modules\formidable\lib\incoming_form.js:144:8)
+    at IncomingForm.parse (E:\workspace\server-admin\node_modules\formidable\lib\incoming_form.js:112:8)
+    at E:\workspace\server-admin\node_modules\koa-body\index.js:209:10
+    at new Promise (<anonymous>)
+    at formy (E:\workspace\server-admin\node_modules\koa-body\index.js:174:10)
+    at E:\workspace\server-admin\node_modules\koa-body\index.js:101:25
+    at dispatch (E:\workspace\server-admin\node_modules\koa-compose\index.js:42:32)
+    at cors (E:\workspace\server-admin\node_modules\koa2-cors\dist\index.js:91:15)
+    at dispatch (E:\workspace\server-admin\node_modules\koa-compose\index.js:42:32)
+
+[2021/04/07:09.33.40] INFO file - creating pool
+
+[2021/04/07:09.33.40] INFO file - === app server running on port 8080 ===
+
+[2021/04/07:09.33.45] ERROR file - Error: bad content-type header, no multipart boundary
+    at IncomingForm._parseContentType (E:\workspace\server-admin\node_modules\formidable\lib\incoming_form.js:279:19)
+    at IncomingForm.writeHeaders (E:\workspace\server-admin\node_modules\formidable\lib\incoming_form.js:144:8)
+    at IncomingForm.parse (E:\workspace\server-admin\node_modules\formidable\lib\incoming_form.js:112:8)
+    at E:\workspace\server-admin\node_modules\koa-body\index.js:209:10
+    at new Promise (<anonymous>)
+    at formy (E:\workspace\server-admin\node_modules\koa-body\index.js:174:10)
+    at E:\workspace\server-admin\node_modules\koa-body\index.js:101:25
+    at dispatch (E:\workspace\server-admin\node_modules\koa-compose\index.js:42:32)
+    at cors (E:\workspace\server-admin\node_modules\koa2-cors\dist\index.js:91:15)
+    at dispatch (E:\workspace\server-admin\node_modules\koa-compose\index.js:42:32)
+
+[2021/04/07:09.35.17] ERROR file - Error: bad content-type header, no multipart boundary
+    at IncomingForm._parseContentType (E:\workspace\server-admin\node_modules\formidable\lib\incoming_form.js:279:19)
+    at IncomingForm.writeHeaders (E:\workspace\server-admin\node_modules\formidable\lib\incoming_form.js:144:8)
+    at IncomingForm.parse (E:\workspace\server-admin\node_modules\formidable\lib\incoming_form.js:112:8)
+    at E:\workspace\server-admin\node_modules\koa-body\index.js:209:10
+    at new Promise (<anonymous>)
+    at formy (E:\workspace\server-admin\node_modules\koa-body\index.js:174:10)
+    at E:\workspace\server-admin\node_modules\koa-body\index.js:101:25
+    at dispatch (E:\workspace\server-admin\node_modules\koa-compose\index.js:42:32)
+    at cors (E:\workspace\server-admin\node_modules\koa2-cors\dist\index.js:91:15)
+    at dispatch (E:\workspace\server-admin\node_modules\koa-compose\index.js:42:32)
+
+[2021/04/07:09.36.51] INFO file - creating pool
+
+[2021/04/07:09.36.52] INFO file - === app server running on port 8080 ===
+
+[2021/04/07:09.36.59] ERROR file - Error: bad content-type header, no multipart boundary
+    at IncomingForm._parseContentType (E:\workspace\server-admin\node_modules\formidable\lib\incoming_form.js:279:19)
+    at IncomingForm.writeHeaders (E:\workspace\server-admin\node_modules\formidable\lib\incoming_form.js:144:8)
+    at IncomingForm.parse (E:\workspace\server-admin\node_modules\formidable\lib\incoming_form.js:112:8)
+    at E:\workspace\server-admin\node_modules\koa-body\index.js:209:10
+    at new Promise (<anonymous>)
+    at formy (E:\workspace\server-admin\node_modules\koa-body\index.js:174:10)
+    at E:\workspace\server-admin\node_modules\koa-body\index.js:101:25
+    at dispatch (E:\workspace\server-admin\node_modules\koa-compose\index.js:42:32)
+    at cors (E:\workspace\server-admin\node_modules\koa2-cors\dist\index.js:91:15)
+    at dispatch (E:\workspace\server-admin\node_modules\koa-compose\index.js:42:32)
+
+[2021/04/07:09.37.35] INFO file - creating pool
+
+[2021/04/07:09.37.36] INFO file - === app server running on port 8080 ===
+
+[2021/04/07:09.41.31] INFO file - creating pool
+
+[2021/04/07:09.41.31] INFO file - === app server running on port 8080 ===
+
+[2021/04/07:09.45.03] INFO file - ====== execute sql ======
+
+[2021/04/07:09.45.03] INFO file -  select count(*) as count from article
+
+[2021/04/07:09.45.03] INFO file - ====== execute sql ======
+
+[2021/04/07:09.45.03] INFO file -  select * from article order by create_time desc limit 0,10
+
+[2021/04/07:09.47.10] INFO file - creating pool
+
+[2021/04/07:09.47.11] INFO file - === app server running on port 8080 ===
+
+[2021/04/07:10.00.56] INFO file - creating pool
+
+[2021/04/07:10.00.56] INFO file - === app server running on port 8080 ===
+
+[2021/04/07:10.01.09] ERROR file - TokenExpiredError: jwt expired
+    at E:\workspace\server-admin\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (E:\workspace\server-admin\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (E:\workspace\server-admin\node_modules\jsonwebtoken\verify.js:94:10)
+    at E:\workspace\server-admin\src\middleware\jwt.ts:24:46
+    at dispatch (E:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (E:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at E:\workspace\server-admin\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (E:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at E:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:36:12
+    at dispatch (E:\workspace\server-admin\node_modules\koa-router\lib\router.js:351:31) {
+  expiredAt: 2021-03-19T02:59:19.000Z,
+  url: '/upload/qiniu'
+}
+
+[2021/04/07:10.01.50] INFO file - creating pool
+
+[2021/04/07:10.01.51] INFO file - === app server running on port 8080 ===
+

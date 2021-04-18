@@ -15,9 +15,7 @@ export default class Sign {
     params.images = JSON.stringify(params.images.split(','));
     params.create_time = (new Date().getTime() / 1000);
     params.edit_time = params.create_time;
-    console.log(params);
     const insertRet = await dao.newArticle(params);
-    console.log(insertRet);
     if (!insertRet.affectedRows) {
       return ctx.body = {
         code: -1,
