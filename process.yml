@@ -1,6 +1,6 @@
 apps:
   - script: ./dist/app.js
-    name: 'domo'
+    name: 'lj-blog'
     watch: ['dist']
     log_date_format: 'YYYY - MM - DD HH: mm Z'
     error_file: './logs/app_err.log'

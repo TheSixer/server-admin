@@ -10010,3 +10010,23 @@
 
 [2021/04/07:10.01.51] INFO file - === app server running on port 8080 ===
 
+[2021/04/18:11.31.36] INFO file - creating pool
+
+[2021/04/18:11.31.37] INFO file - === app server running on port 8080 ===
+
+[2021/04/18:11.37.19] INFO file - ====== execute sql ======
+
+[2021/04/18:11.37.19] INFO file -  select count(*) as count from article
+
+[2021/04/18:11.37.19] INFO file - ====== execute sql ======
+
+[2021/04/18:11.37.19] INFO file -  select * from article order by create_time desc limit 0,10
+
+[2021/04/18:11.39.18] INFO file - ====== execute sql ======
+
+[2021/04/18:11.39.18] INFO file -  select count(*) as count from article
+
+[2021/04/18:11.39.18] INFO file - ====== execute sql ======
+
+[2021/04/18:11.39.18] INFO file -  select * from article order by create_time desc limit 0,10
+

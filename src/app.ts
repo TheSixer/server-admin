@@ -12,7 +12,7 @@ import tpl from './middleware/tpl'
 import errorHandler from './middleware/error'
 
 const app = new koa()
-const router = new koaRouter();
+const router = new koaRouter({ prefix: '/api/v1' });
 const baseDir = path.normalize(__dirname + '/..')
 
 app.use(cors({
