@@ -11,7 +11,7 @@ let pool: Pool = null;
  * get the connection of database
  * 获取数据库连接
  */
-export const getConnection = (callback: Function) => {
+export const getConnection = async (callback: Function) => {
   if (!pool) {
     log.info("creating pool");
     pool = mysql.createPool(dbConfig);

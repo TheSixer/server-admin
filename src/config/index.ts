@@ -12,15 +12,15 @@ export const app = {
  * mysql database config
  */
 export const db: PoolConfig = {
-  host: 'localhost',
+  host: process.env.DB_HOST || 'localhost',
   port: 3306,
-  user: 'root',
-  password: 'admin',
-  database: 'blogdb',
-  charset: 'utf8mb4',//utf8mb4才能保存emoji
+  user: process.env.DB_USER || 'root',
+  password: process.env.DB_PWD || 'admin',
+  // database: 'blogdb',
+  // charset: 'utf8mb4',//utf8mb4才能保存emoji
   // socketPath: '/var/lib/mysql/mysql.sock',
-  multipleStatements: true,// 可同时查询多条语句, 但不能参数化传值
-  connectionLimit: 100
+  // multipleStatements: true,// 可同时查询多条语句, 但不能参数化传值
+  // connectionLimit: 100
 };
 
 /**

@@ -9,10 +9,16 @@ apps:
     max_memory_restart: '200M'
     cron_restart: '0 1 * * * '
     exec_mode: 'cluster'
-    instances: 4
+    instances: 1
     env:
       PORT: 3000
       NODE_ENV: development
+      DB_HOST: 'localhost'
+      DB_USER: 'root'
+      DB_PWD: 'admin'
     env_production:
       PORT: 3010
       NODE_ENV: production
+      DB_HOST: 'localhost'
+      DB_USER: 'admin'
+      DB_PWD: 'Autu_2022_2022'

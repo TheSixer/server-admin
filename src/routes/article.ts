@@ -11,9 +11,9 @@ export default class Sign {
   @post('/new')
   async register(ctx: Context) {
     const params = cloneDeep(ctx.request.body);
-    params.tags = JSON.stringify(params.tags.split(','));
-    params.images = JSON.stringify(params.images.split(','));
-    params.create_time = (new Date().getTime() / 1000);
+    params.tags = params.tags;
+    params.images = params.images;
+    params.create_time = new Date().getTime();
     params.edit_time = params.create_time;
     const insertRet = await dao.newArticle(params);
     if (!insertRet.affectedRows) {

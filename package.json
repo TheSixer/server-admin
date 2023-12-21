@@ -4,7 +4,7 @@
   "private": true,
   "main": "./src/app.ts",
   "scripts": {
-    "start": "set PORT=8080 && gulp",
+    "start": "set PORT=8080 && set NODE_ENV=production && gulp",
     "build": "gulp build",
     "eslint": "eslint --fix --ext .js,.ts src/",
     "dev": "pm2 start process.yml",
@@ -54,6 +54,7 @@
     "@typescript-eslint/eslint-plugin": "^4.14.0",
     "@typescript-eslint/parser": "^4.14.0",
     "del": "^6.0.0",
+    "dotenv": "^16.3.1",
     "eslint": "^7.18.0",
     "gulp": "^4.0.2",
     "gulp-nodemon": "^2.5.0",

@@ -10030,3 +10030,2433 @@
 
 [2021/04/18:11.39.18] INFO file -  select * from article order by create_time desc limit 0,10
 
+[2023/12/12:21.09.07] INFO file - creating pool
+
+[2023/12/12:21.09.09] INFO file - === app server running on port 8080 ===
+
+[2023/12/12:21.09.13] ERROR file - 404 Not Found : http://localhost:8080/
+
+[2023/12/12:21.09.13] ERROR file - Error: ENOENT: no such file or directory, open 'F:\workspace\server-admin\public\favicon.jpg'
+    at Object.openSync (node:fs:585:3)
+    at Object.readFileSync (node:fs:453:35)
+    at F:\workspace\server-admin\node_modules\koa-favicon\index.js:50:28
+    at dispatch (F:\workspace\server-admin\node_modules\koa-compose\index.js:42:32)
+    at serve (F:\workspace\server-admin\node_modules\koa-static\index.js:53:15)
+    at async cors (F:\workspace\server-admin\node_modules\koa2-cors\dist\index.js:91:9) {
+  errno: -4058,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: 'F:\\workspace\\server-admin\\public\\favicon.jpg'
+}
+
+[2023/12/12:21.24.36] INFO file - ====== execute sql ======
+
+[2023/12/12:21.24.36] INFO file -  select count(*) as count from article
+
+[2023/12/12:21.24.36] ERROR file - Error: connect ECONNREFUSED 127.0.0.1:3306
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1187:16)
+    --------------------
+    at Protocol._enqueue (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:48:16)
+    at Pool.query (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:202:8)
+    at F:\workspace\server-admin\src\common\dbHelper.ts:14:20
+    at new Promise (<anonymous>)
+    at Object.getArticleCount (F:\workspace\server-admin\src\common\dbHelper.ts:7:44)
+    at getArticleList (F:\workspace\server-admin\src\routes\article.ts:46:30)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32) {
+  errno: -4078,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 3306,
+  fatal: true
+}
+
+[2023/12/12:21.58.56] INFO file - creating pool
+
+[2023/12/12:21.58.57] INFO file - === app server running on port 8080 ===
+
+[2023/12/12:22.29.24] INFO file - ====== execute sql ======
+
+[2023/12/12:22.29.24] INFO file -  select count(*) as count from article
+
+[2023/12/12:22.29.24] ERROR file - Error: ER_BAD_DB_ERROR: Unknown database 'blogdb'
+    at Handshake.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Handshake.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Handshake.js:123:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Protocol._enqueue (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:48:16)
+    at Pool.query (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:202:8)
+    at F:\workspace\server-admin\src\common\dbHelper.ts:14:20
+    at new Promise (<anonymous>)
+    at Object.getArticleCount (F:\workspace\server-admin\src\common\dbHelper.ts:7:44)
+    at getArticleList (F:\workspace\server-admin\src\routes\article.ts:46:30)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32) {
+  code: 'ER_BAD_DB_ERROR',
+  errno: 1049,
+  sqlMessage: "Unknown database 'blogdb'",
+  sqlState: '42000',
+  fatal: true
+}
+
+[2023/12/12:22.29.25] INFO file - ====== execute sql ======
+
+[2023/12/12:22.29.25] INFO file -  select count(*) as count from article
+
+[2023/12/12:22.29.25] ERROR file - Error: ER_BAD_DB_ERROR: Unknown database 'blogdb'
+    at Handshake.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Handshake.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Handshake.js:123:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Protocol._enqueue (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:48:16)
+    at Pool.query (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:202:8)
+    at F:\workspace\server-admin\src\common\dbHelper.ts:14:20
+    at new Promise (<anonymous>)
+    at Object.getArticleCount (F:\workspace\server-admin\src\common\dbHelper.ts:7:44)
+    at getArticleList (F:\workspace\server-admin\src\routes\article.ts:46:30)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32) {
+  code: 'ER_BAD_DB_ERROR',
+  errno: 1049,
+  sqlMessage: "Unknown database 'blogdb'",
+  sqlState: '42000',
+  fatal: true
+}
+
+[2023/12/12:22.33.19] INFO file - ====== execute sql ======
+
+[2023/12/12:22.33.19] INFO file -  select count(*) as count from article
+
+[2023/12/12:22.33.19] ERROR file - Error: ER_NO_SUCH_TABLE: Table 'blogdb.article' doesn't exist
+    at Query.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Pool.query (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:199:23)
+    at F:\workspace\server-admin\src\common\dbHelper.ts:14:20
+    at new Promise (<anonymous>)
+    at Object.getArticleCount (F:\workspace\server-admin\src\common\dbHelper.ts:7:44)
+    at getArticleList (F:\workspace\server-admin\src\routes\article.ts:46:30)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\src\middleware\jwt.ts:39:11
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18) {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlMessage: "Table 'blogdb.article' doesn't exist",
+  sqlState: '42S02',
+  index: 0,
+  sql: 'select count(*) as count from article'
+}
+
+[2023/12/12:22.37.00] ERROR file - 404 Not Found : http://localhost:8080/api/v1/article/new
+
+[2023/12/12:22.37.28] ERROR file - 404 Not Found : http://localhost:8080/api/v1/article/new
+
+[2023/12/12:22.37.34] ERROR file - 404 Not Found : http://localhost:8080/api/v1/article/new
+
+[2023/12/12:22.37.43] ERROR file - 404 Not Found : http://localhost:8080/api/v1/article/new?title=test&content=string&introduction=string&tags=string&type=number&images=strig
+
+[2023/12/12:22.37.44] ERROR file - 404 Not Found : http://localhost:8080/api/v1/article/new?title=test&content=string&introduction=string&tags=string&type=number&images=strig
+
+[2023/12/12:22.37.53] ERROR file - TypeError: Cannot read properties of undefined (reading 'split')
+    at register (F:\workspace\server-admin\src\routes\article.ts:14:46)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\src\middleware\jwt.ts:39:11
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:36:12
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\lib\router.js:351:31)
+
+[2023/12/12:22.38.06] INFO file - ====== execute sql ======
+
+[2023/12/12:22.38.06] INFO file - insert into article set ? {
+  title: 'test',
+  content: 'string',
+  introduction: 'string',
+  tags: '["string"]',
+  type: 'number',
+  images: '["strig"]',
+  create_time: 1702391886.081,
+  edit_time: 1702391886.081
+}
+
+[2023/12/12:22.38.06] ERROR file - Error: ER_NO_SUCH_TABLE: Table 'blogdb.article' doesn't exist
+    at Query.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Pool.query (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:199:23)
+    at F:\workspace\server-admin\src\common\dbHelper.ts:15:15
+    at new Promise (<anonymous>)
+    at Object.newArticle (F:\workspace\server-admin\src\common\dbHelper.ts:7:44)
+    at register (F:\workspace\server-admin\src\routes\article.ts:18:33)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\src\middleware\jwt.ts:39:11
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18) {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlMessage: "Table 'blogdb.article' doesn't exist",
+  sqlState: '42S02',
+  index: 0,
+  sql: 'insert into article set `title` = \'test\', `content` = \'string\', `introduction` = \'string\', `tags` = \'[\\"string\\"]\', `type` = \'number\', `images` = \'[\\"strig\\"]\', `create_time` = 1702391886.081, `edit_time` = 1702391886.081'
+}
+
+[2023/12/12:22.42.42] INFO file - creating pool
+
+[2023/12/12:22.42.42] INFO file - === app server running on port 8080 ===
+
+[2023/12/12:22.42.46] INFO file - ====== execute sql ======
+
+[2023/12/12:22.42.46] INFO file - insert into article set ? {
+  title: 'test',
+  content: 'string',
+  introduction: 'string',
+  tags: '["string"]',
+  type: 'number',
+  images: '["strig"]',
+  create_time: 1702392166.306,
+  edit_time: 1702392166.306
+}
+
+[2023/12/12:22.42.46] ERROR file - Error: ER_NO_SUCH_TABLE: Table 'blogdb.article' doesn't exist
+    at Query.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Pool.query (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:199:23)
+    at F:\workspace\server-admin\src\common\dbHelper.ts:15:15
+    at new Promise (<anonymous>)
+    at Object.newArticle (F:\workspace\server-admin\src\common\dbHelper.ts:7:44)
+    at register (F:\workspace\server-admin\src\routes\article.ts:18:33)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\src\middleware\jwt.ts:39:11
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18) {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlMessage: "Table 'blogdb.article' doesn't exist",
+  sqlState: '42S02',
+  index: 0,
+  sql: 'insert into article set `title` = \'test\', `content` = \'string\', `introduction` = \'string\', `tags` = \'[\\"string\\"]\', `type` = \'number\', `images` = \'[\\"strig\\"]\', `create_time` = 1702392166.306, `edit_time` = 1702392166.306'
+}
+
+[2023/12/12:22.42.51] INFO file - ====== execute sql ======
+
+[2023/12/12:22.42.51] INFO file - insert into article set ? {
+  title: 'test',
+  content: 'string',
+  introduction: 'string',
+  tags: '["string"]',
+  type: 'number',
+  images: '["strig"]',
+  create_time: 1702392171.645,
+  edit_time: 1702392171.645
+}
+
+[2023/12/12:22.42.51] ERROR file - Error: ER_NO_SUCH_TABLE: Table 'blogdb.article' doesn't exist
+    at Query.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Pool.query (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:199:23)
+    at F:\workspace\server-admin\src\common\dbHelper.ts:15:15
+    at new Promise (<anonymous>)
+    at Object.newArticle (F:\workspace\server-admin\src\common\dbHelper.ts:7:44)
+    at register (F:\workspace\server-admin\src\routes\article.ts:18:33)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\src\middleware\jwt.ts:39:11
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18) {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlMessage: "Table 'blogdb.article' doesn't exist",
+  sqlState: '42S02',
+  index: 0,
+  sql: 'insert into article set `title` = \'test\', `content` = \'string\', `introduction` = \'string\', `tags` = \'[\\"string\\"]\', `type` = \'number\', `images` = \'[\\"strig\\"]\', `create_time` = 1702392171.645, `edit_time` = 1702392171.645'
+}
+
+[2023/12/12:22.42.59] INFO file - ====== execute sql ======
+
+[2023/12/12:22.42.59] INFO file - insert into article set ? {
+  title: 'test',
+  content: 'string',
+  introduction: 'string',
+  tags: '["string"]',
+  type: 'number',
+  images: '["strig"]',
+  create_time: 1702392179.166,
+  edit_time: 1702392179.166
+}
+
+[2023/12/12:22.42.59] ERROR file - Error: ER_NO_SUCH_TABLE: Table 'blogdb.article' doesn't exist
+    at Query.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Pool.query (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:199:23)
+    at F:\workspace\server-admin\src\common\dbHelper.ts:15:15
+    at new Promise (<anonymous>)
+    at Object.newArticle (F:\workspace\server-admin\src\common\dbHelper.ts:7:44)
+    at register (F:\workspace\server-admin\src\routes\article.ts:18:33)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\src\middleware\jwt.ts:39:11
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18) {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlMessage: "Table 'blogdb.article' doesn't exist",
+  sqlState: '42S02',
+  index: 0,
+  sql: 'insert into article set `title` = \'test\', `content` = \'string\', `introduction` = \'string\', `tags` = \'[\\"string\\"]\', `type` = \'number\', `images` = \'[\\"strig\\"]\', `create_time` = 1702392179.166, `edit_time` = 1702392179.166'
+}
+
+[2023/12/12:22.45.02] INFO file - creating pool
+
+[2023/12/12:22.45.03] INFO file - === app server running on port 8080 ===
+
+[2023/12/12:22.45.05] INFO file - ====== execute sql ======
+
+[2023/12/12:22.45.05] INFO file - insert into article set ? {
+  title: 'test',
+  content: 'string',
+  introduction: 'string',
+  tags: '["string"]',
+  type: 'number',
+  images: '["strig"]',
+  create_time: 1702392305.902,
+  edit_time: 1702392305.902
+}
+
+[2023/12/12:22.45.05] ERROR file - Error: ER_NO_SUCH_TABLE: Table 'blogdb.article' doesn't exist
+    at Query.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Pool.query (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:199:23)
+    at F:\workspace\server-admin\src\common\dbHelper.ts:15:15
+    at new Promise (<anonymous>)
+    at Object.newArticle (F:\workspace\server-admin\src\common\dbHelper.ts:7:44)
+    at register (F:\workspace\server-admin\src\routes\article.ts:19:33)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\src\middleware\jwt.ts:39:11
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18) {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlMessage: "Table 'blogdb.article' doesn't exist",
+  sqlState: '42S02',
+  index: 0,
+  sql: 'insert into article set `title` = \'test\', `content` = \'string\', `introduction` = \'string\', `tags` = \'[\\"string\\"]\', `type` = \'number\', `images` = \'[\\"strig\\"]\', `create_time` = 1702392305.902, `edit_time` = 1702392305.902'
+}
+
+[2023/12/12:22.50.40] INFO file - ====== execute sql ======
+
+[2023/12/12:22.50.40] INFO file - insert into article set ? {
+  title: 'test',
+  content: 'string',
+  introduction: 'string',
+  tags: '["string"]',
+  type: 'number',
+  images: '["strig"]',
+  create_time: 1702392640.841,
+  edit_time: 1702392640.841
+}
+
+[2023/12/12:22.50.40] ERROR file - Error: ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect integer value: 'number' for column 'type' at row 1
+    at Query.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Pool.query (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:199:23)
+    at F:\workspace\server-admin\src\common\dbHelper.ts:15:15
+    at new Promise (<anonymous>)
+    at Object.newArticle (F:\workspace\server-admin\src\common\dbHelper.ts:7:44)
+    at register (F:\workspace\server-admin\src\routes\article.ts:19:33)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\src\middleware\jwt.ts:39:11
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18) {
+  code: 'ER_TRUNCATED_WRONG_VALUE_FOR_FIELD',
+  errno: 1366,
+  sqlMessage: "Incorrect integer value: 'number' for column 'type' at row 1",
+  sqlState: 'HY000',
+  index: 0,
+  sql: 'insert into article set `title` = \'test\', `content` = \'string\', `introduction` = \'string\', `tags` = \'[\\"string\\"]\', `type` = \'number\', `images` = \'[\\"strig\\"]\', `create_time` = 1702392640.841, `edit_time` = 1702392640.841'
+}
+
+[2023/12/12:22.50.51] INFO file - ====== execute sql ======
+
+[2023/12/12:22.50.51] INFO file - insert into article set ? {
+  title: 'test',
+  content: 'string',
+  introduction: 'string',
+  tags: '["string"]',
+  type: 1,
+  images: '["strig"]',
+  create_time: 1702392651.939,
+  edit_time: 1702392651.939
+}
+
+[2023/12/12:22.50.51] ERROR file - Error: ER_NO_DEFAULT_FOR_FIELD: Field 'id' doesn't have a default value
+    at Query.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Pool.query (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:199:23)
+    at F:\workspace\server-admin\src\common\dbHelper.ts:15:15
+    at new Promise (<anonymous>)
+    at Object.newArticle (F:\workspace\server-admin\src\common\dbHelper.ts:7:44)
+    at register (F:\workspace\server-admin\src\routes\article.ts:19:33)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\src\middleware\jwt.ts:39:11
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18) {
+  code: 'ER_NO_DEFAULT_FOR_FIELD',
+  errno: 1364,
+  sqlMessage: "Field 'id' doesn't have a default value",
+  sqlState: 'HY000',
+  index: 0,
+  sql: 'insert into article set `title` = \'test\', `content` = \'string\', `introduction` = \'string\', `tags` = \'[\\"string\\"]\', `type` = 1, `images` = \'[\\"strig\\"]\', `create_time` = 1702392651.939, `edit_time` = 1702392651.939'
+}
+
+[2023/12/12:22.53.17] INFO file - ====== execute sql ======
+
+[2023/12/12:22.53.17] INFO file - insert into article set ? {
+  title: 'test',
+  content: 'string',
+  introduction: 'string',
+  tags: '["string"]',
+  type: 1,
+  images: '["strig"]',
+  create_time: 1702392797.407,
+  edit_time: 1702392797.407
+}
+
+[2023/12/12:22.54.46] INFO file - creating pool
+
+[2023/12/12:22.54.47] INFO file - === app server running on port 8080 ===
+
+[2023/12/12:22.56.14] INFO file - ====== execute sql ======
+
+[2023/12/12:22.56.14] INFO file - insert into article set ? {
+  title: 'test',
+  content: 'string',
+  introduction: 'string',
+  tags: '["string"]',
+  type: 1,
+  images: '["strig"]',
+  create_time: 1702392974.049,
+  edit_time: 1702392974.049
+}
+
+[2023/12/12:22.56.14] ERROR file - Error: ER_DUP_ENTRY: Duplicate entry '10000' for key 'PRIMARY'
+    at Query.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Pool.query (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:199:23)
+    at F:\workspace\server-admin\src\common\dbHelper.ts:15:15
+    at new Promise (<anonymous>)
+    at Object.newArticle (F:\workspace\server-admin\src\common\dbHelper.ts:7:44)
+    at register (F:\workspace\server-admin\src\routes\article.ts:18:33)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\src\middleware\jwt.ts:39:11
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18) {
+  code: 'ER_DUP_ENTRY',
+  errno: 1062,
+  sqlMessage: "Duplicate entry '10000' for key 'PRIMARY'",
+  sqlState: '23000',
+  index: 0,
+  sql: 'insert into article set `title` = \'test\', `content` = \'string\', `introduction` = \'string\', `tags` = \'[\\"string\\"]\', `type` = 1, `images` = \'[\\"strig\\"]\', `create_time` = 1702392974.049, `edit_time` = 1702392974.049'
+}
+
+[2023/12/12:23.00.34] INFO file - ====== execute sql ======
+
+[2023/12/12:23.00.34] INFO file - insert into article set ? {
+  title: 'test',
+  content: 'string',
+  introduction: 'string',
+  tags: '["string"]',
+  type: 1,
+  images: '["strig"]',
+  create_time: 1702393234.29,
+  edit_time: 1702393234.29
+}
+
+[2023/12/12:23.00.36] INFO file - ====== execute sql ======
+
+[2023/12/12:23.00.36] INFO file - insert into article set ? {
+  title: 'test',
+  content: 'string',
+  introduction: 'string',
+  tags: '["string"]',
+  type: 1,
+  images: '["strig"]',
+  create_time: 1702393236.317,
+  edit_time: 1702393236.317
+}
+
+[2023/12/12:23.00.37] INFO file - ====== execute sql ======
+
+[2023/12/12:23.00.37] INFO file - insert into article set ? {
+  title: 'test',
+  content: 'string',
+  introduction: 'string',
+  tags: '["string"]',
+  type: 1,
+  images: '["strig"]',
+  create_time: 1702393237.79,
+  edit_time: 1702393237.79
+}
+
+[2023/12/12:23.01.28] INFO file - ====== execute sql ======
+
+[2023/12/12:23.01.28] INFO file - insert into article set ? {
+  title: 'test',
+  content: 'string',
+  introduction: 'string',
+  tags: '["string"]',
+  type: 1,
+  images: '["strig"]',
+  create_time: 1702393288.543,
+  edit_time: 1702393288.543
+}
+
+[2023/12/12:23.01.42] INFO file - ====== execute sql ======
+
+[2023/12/12:23.01.42] INFO file - insert into article set ? {
+  title: 'test',
+  content: 'string',
+  introduction: 'string',
+  tags: '["string"]',
+  type: 1,
+  images: '["strig"]',
+  create_time: 1702393302.429,
+  edit_time: 1702393302.429
+}
+
+[2023/12/12:23.03.14] INFO file - ====== execute sql ======
+
+[2023/12/12:23.03.14] INFO file -  select count(*) as count from article
+
+[2023/12/12:23.03.14] INFO file - ====== execute sql ======
+
+[2023/12/12:23.03.14] INFO file -  select * from article order by create_time desc limit 0,10
+
+[2023/12/12:23.03.20] INFO file - ====== execute sql ======
+
+[2023/12/12:23.03.20] INFO file - insert into article set ? {
+  title: 'test',
+  content: 'string',
+  introduction: 'string',
+  tags: '["string"]',
+  type: 1,
+  images: '["strig"]',
+  create_time: 1702393400.781,
+  edit_time: 1702393400.781
+}
+
+[2023/12/12:23.03.21] INFO file - ====== execute sql ======
+
+[2023/12/12:23.03.21] INFO file - insert into article set ? {
+  title: 'test',
+  content: 'string',
+  introduction: 'string',
+  tags: '["string"]',
+  type: 1,
+  images: '["strig"]',
+  create_time: 1702393401.75,
+  edit_time: 1702393401.75
+}
+
+[2023/12/12:23.03.22] INFO file - ====== execute sql ======
+
+[2023/12/12:23.03.22] INFO file - insert into article set ? {
+  title: 'test',
+  content: 'string',
+  introduction: 'string',
+  tags: '["string"]',
+  type: 1,
+  images: '["strig"]',
+  create_time: 1702393402.495,
+  edit_time: 1702393402.495
+}
+
+[2023/12/12:23.03.24] INFO file - ====== execute sql ======
+
+[2023/12/12:23.03.24] INFO file -  select count(*) as count from article
+
+[2023/12/12:23.03.24] INFO file - ====== execute sql ======
+
+[2023/12/12:23.03.24] INFO file -  select * from article order by create_time desc limit 0,10
+
+[2023/12/12:23.07.58] INFO file - creating pool
+
+[2023/12/12:23.07.59] INFO file - === app server running on port 8080 ===
+
+[2023/12/12:23.09.51] INFO file - ====== execute sql ======
+
+[2023/12/12:23.09.51] INFO file -  select count(*) as count from article
+
+[2023/12/12:23.09.51] INFO file - ====== execute sql ======
+
+[2023/12/12:23.09.51] INFO file -  select * from article order by create_time desc limit 0,10
+
+[2023/12/12:23.09.59] INFO file - ====== execute sql ======
+
+[2023/12/12:23.09.59] INFO file - insert into article set ? {
+  title: 'test',
+  content: 'string',
+  introduction: 'string',
+  tags: '["string"]',
+  type: 1,
+  images: '["strig"]',
+  create_time: 1702393799068,
+  edit_time: 1702393799068
+}
+
+[2023/12/12:23.09.59] INFO file - ====== execute sql ======
+
+[2023/12/12:23.09.59] INFO file - insert into article set ? {
+  title: 'test',
+  content: 'string',
+  introduction: 'string',
+  tags: '["string"]',
+  type: 1,
+  images: '["strig"]',
+  create_time: 1702393799902,
+  edit_time: 1702393799902
+}
+
+[2023/12/12:23.10.00] INFO file - ====== execute sql ======
+
+[2023/12/12:23.10.00] INFO file - insert into article set ? {
+  title: 'test',
+  content: 'string',
+  introduction: 'string',
+  tags: '["string"]',
+  type: 1,
+  images: '["strig"]',
+  create_time: 1702393800689,
+  edit_time: 1702393800689
+}
+
+[2023/12/12:23.10.01] INFO file - ====== execute sql ======
+
+[2023/12/12:23.10.01] INFO file - insert into article set ? {
+  title: 'test',
+  content: 'string',
+  introduction: 'string',
+  tags: '["string"]',
+  type: 1,
+  images: '["strig"]',
+  create_time: 1702393801049,
+  edit_time: 1702393801049
+}
+
+[2023/12/12:23.10.01] INFO file - ====== execute sql ======
+
+[2023/12/12:23.10.01] INFO file - insert into article set ? {
+  title: 'test',
+  content: 'string',
+  introduction: 'string',
+  tags: '["string"]',
+  type: 1,
+  images: '["strig"]',
+  create_time: 1702393801440,
+  edit_time: 1702393801440
+}
+
+[2023/12/12:23.10.07] INFO file - ====== execute sql ======
+
+[2023/12/12:23.10.07] INFO file - insert into article set ? {
+  title: 'test',
+  content: 'string',
+  introduction: 'string,sdfg',
+  tags: '["string"]',
+  type: 1,
+  images: '["strig"]',
+  create_time: 1702393807287,
+  edit_time: 1702393807287
+}
+
+[2023/12/12:23.10.10] INFO file - ====== execute sql ======
+
+[2023/12/12:23.10.10] INFO file -  select count(*) as count from article
+
+[2023/12/12:23.10.10] INFO file - ====== execute sql ======
+
+[2023/12/12:23.10.10] INFO file -  select * from article order by create_time desc limit 0,10
+
+[2023/12/12:23.10.21] INFO file - ====== execute sql ======
+
+[2023/12/12:23.10.21] INFO file - insert into article set ? {
+  title: 'test',
+  content: 'string',
+  introduction: 'string,sdfg',
+  tags: '["string","wertwer"]',
+  type: 1,
+  images: '["strig"]',
+  create_time: 1702393821959,
+  edit_time: 1702393821959
+}
+
+[2023/12/12:23.10.23] INFO file - ====== execute sql ======
+
+[2023/12/12:23.10.23] INFO file -  select count(*) as count from article
+
+[2023/12/12:23.10.23] INFO file - ====== execute sql ======
+
+[2023/12/12:23.10.23] INFO file -  select * from article order by create_time desc limit 0,10
+
+[2023/12/12:23.11.41] INFO file - creating pool
+
+[2023/12/12:23.11.41] INFO file - === app server running on port 8080 ===
+
+[2023/12/17:15.57.53] INFO file - creating pool
+
+[2023/12/17:15.57.55] INFO file - === app server running on port 8080 ===
+
+[2023/12/17:15.58.24] ERROR file - 404 Not Found : http://localhost:8080/article/new
+
+[2023/12/17:16.00.02] ERROR file - TypeError: params.tags.join is not a function
+    at register (F:\workspace\server-admin\src\routes\article.ts:14:31)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\src\middleware\jwt.ts:39:11
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:36:12
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\lib\router.js:351:31)
+
+[2023/12/17:16.00.52] ERROR file - TypeError: params.tags.join is not a function
+    at register (F:\workspace\server-admin\src\routes\article.ts:14:31)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\src\middleware\jwt.ts:39:11
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:36:12
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\lib\router.js:351:31)
+
+[2023/12/17:16.01.25] ERROR file - TypeError: params.tags.join is not a function
+    at register (F:\workspace\server-admin\src\routes\article.ts:14:31)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\src\middleware\jwt.ts:39:11
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:36:12
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\lib\router.js:351:31)
+
+[2023/12/17:16.02.14] ERROR file - TypeError: params.tags.join is not a function
+    at register (F:\workspace\server-admin\src\routes\article.ts:14:31)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\src\middleware\jwt.ts:39:11
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:36:12
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\lib\router.js:351:31)
+
+[2023/12/17:16.03.27] INFO file - creating pool
+
+[2023/12/17:16.03.27] INFO file - === app server running on port 8080 ===
+
+[2023/12/17:16.03.33] INFO file - creating pool
+
+[2023/12/17:16.03.33] INFO file - === app server running on port 8080 ===
+
+[2023/12/17:16.03.36] INFO file - creating pool
+
+[2023/12/17:16.03.37] INFO file - === app server running on port 8080 ===
+
+[2023/12/17:16.03.47] INFO file - ====== execute sql ======
+
+[2023/12/17:16.03.47] INFO file - insert into article set ? {
+  title: 'testasd',
+  type: '2',
+  tags: 'asdfasdf',
+  content: 'qasdfasdfasdf',
+  introduction: 'testasd',
+  images: 'www.baidu.com,www.qq.com',
+  create_time: 1702800227711,
+  edit_time: 1702800227711
+}
+
+[2023/12/17:16.03.55] INFO file - ====== execute sql ======
+
+[2023/12/17:16.03.55] INFO file -  select count(*) as count from article
+
+[2023/12/17:16.03.55] INFO file - ====== execute sql ======
+
+[2023/12/17:16.03.55] INFO file -  select * from article order by create_time desc limit 0,10
+
+[2023/12/17:16.05.02] INFO file - ====== execute sql ======
+
+[2023/12/17:16.05.02] INFO file - insert into article set ? {
+  title: 'aaaaaa',
+  type: '1',
+  tags: 'aaaaa',
+  content: 'aaaaa',
+  introduction: 'aaaaaa',
+  images: 'www.baidu.com,www.qq.com',
+  create_time: 1702800302218,
+  edit_time: 1702800302218
+}
+
+[2023/12/17:16.05.05] INFO file - ====== execute sql ======
+
+[2023/12/17:16.05.05] INFO file -  select count(*) as count from article
+
+[2023/12/17:16.05.05] INFO file - ====== execute sql ======
+
+[2023/12/17:16.05.05] INFO file -  select * from article order by create_time desc limit 0,10
+
+[2023/12/21:22.23.52] INFO file - creating pool
+
+[2023/12/21:22.23.53] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:22.29.13] INFO file - creating pool
+
+[2023/12/21:22.29.14] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:22.29.40] INFO file - creating pool
+
+[2023/12/21:22.29.41] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:22.29.41] ERROR file - Error: ER_BAD_DB_ERROR: Unknown database 'blogdb'
+    at Handshake.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Handshake.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Handshake.js:123:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Protocol._enqueue (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:48:16)
+    at Object.getConnection (F:\workspace\server-admin\src\common\dbPool.ts:19:8)
+    at Object.createDb (F:\workspace\server-admin\src\common\dbHelper.ts:7:3)
+    at Object.<anonymous> (F:\workspace\server-admin\src\dao\index.ts:14:1)
+    at Module._compile (node:internal/modules/cjs/loader:1105:14)
+    at Module.m._compile (E:\Program Files\Nvm\nvm\v16.15.1\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1159:10) {
+  code: 'ER_BAD_DB_ERROR',
+  errno: 1049,
+  sqlMessage: "Unknown database 'blogdb'",
+  sqlState: '42000',
+  fatal: true
+}
+
+[2023/12/21:22.30.34] INFO file - ====== execute sql ======
+
+[2023/12/21:22.30.34] INFO file -  select count(*) as count from article
+
+[2023/12/21:22.30.34] ERROR file - Error: ER_BAD_DB_ERROR: Unknown database 'blogdb'
+    at Handshake.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Handshake.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Handshake.js:123:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Protocol._enqueue (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:48:16)
+    at Pool.query (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:202:8)
+    at F:\workspace\server-admin\src\common\dbHelper.ts:44:20
+    at new Promise (<anonymous>)
+    at Object.getArticleCount (F:\workspace\server-admin\src\common\dbHelper.ts:37:44)
+    at getArticleList (F:\workspace\server-admin\src\routes\article.ts:46:30)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32) {
+  code: 'ER_BAD_DB_ERROR',
+  errno: 1049,
+  sqlMessage: "Unknown database 'blogdb'",
+  sqlState: '42000',
+  fatal: true
+}
+
+[2023/12/21:22.35.29] INFO file - creating pool
+
+[2023/12/21:22.35.29] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:22.35.29] ERROR file - Error: ER_BAD_DB_ERROR: Unknown database 'blogdb'
+    at Handshake.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Handshake.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Handshake.js:123:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Protocol._enqueue (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:48:16)
+    at Object.getConnection (F:\workspace\server-admin\src\common\dbPool.ts:19:8)
+    at Object.createDb (F:\workspace\server-admin\src\common\dbHelper.ts:7:3)
+    at Object.<anonymous> (F:\workspace\server-admin\src\dao\index.ts:14:1)
+    at Module._compile (node:internal/modules/cjs/loader:1105:14)
+    at Module.m._compile (E:\Program Files\Nvm\nvm\v16.15.1\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1159:10) {
+  code: 'ER_BAD_DB_ERROR',
+  errno: 1049,
+  sqlMessage: "Unknown database 'blogdb'",
+  sqlState: '42000',
+  fatal: true
+}
+
+[2023/12/21:22.35.33] INFO file - ====== execute sql ======
+
+[2023/12/21:22.35.33] INFO file -  select count(*) as count from article
+
+[2023/12/21:22.35.33] ERROR file - Error: ER_BAD_DB_ERROR: Unknown database 'blogdb'
+    at Handshake.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Handshake.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Handshake.js:123:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Protocol._enqueue (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:48:16)
+    at Pool.query (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:202:8)
+    at F:\workspace\server-admin\src\common\dbHelper.ts:44:20
+    at new Promise (<anonymous>)
+    at Object.getArticleCount (F:\workspace\server-admin\src\common\dbHelper.ts:37:44)
+    at getArticleList (F:\workspace\server-admin\src\routes\article.ts:46:30)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32) {
+  code: 'ER_BAD_DB_ERROR',
+  errno: 1049,
+  sqlMessage: "Unknown database 'blogdb'",
+  sqlState: '42000',
+  fatal: true
+}
+
+[2023/12/21:22.37.16] INFO file - creating pool
+
+[2023/12/21:22.37.17] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:22.37.17] ERROR file - Error: ER_BAD_DB_ERROR: Unknown database 'blogdb'
+    at Handshake.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Handshake.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Handshake.js:123:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Protocol._enqueue (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:48:16)
+    at Object.getConnection (F:\workspace\server-admin\src\common\dbPool.ts:19:8)
+    at Object.createDb (F:\workspace\server-admin\src\common\dbHelper.ts:7:3)
+    at Object.<anonymous> (F:\workspace\server-admin\src\dao\index.ts:14:1)
+    at Module._compile (node:internal/modules/cjs/loader:1105:14)
+    at Module.m._compile (E:\Program Files\Nvm\nvm\v16.15.1\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1159:10) {
+  code: 'ER_BAD_DB_ERROR',
+  errno: 1049,
+  sqlMessage: "Unknown database 'blogdb'",
+  sqlState: '42000',
+  fatal: true
+}
+
+[2023/12/21:22.37.20] INFO file - creating pool
+
+[2023/12/21:22.37.20] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:22.37.20] ERROR file - Error: ER_BAD_DB_ERROR: Unknown database 'blogdb'
+    at Handshake.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Handshake.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Handshake.js:123:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Protocol._enqueue (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:48:16)
+    at Object.getConnection (F:\workspace\server-admin\src\common\dbPool.ts:19:8)
+    at Object.createDb (F:\workspace\server-admin\src\common\dbHelper.ts:7:3)
+    at Object.<anonymous> (F:\workspace\server-admin\src\dao\index.ts:14:1)
+    at Module._compile (node:internal/modules/cjs/loader:1105:14)
+    at Module.m._compile (E:\Program Files\Nvm\nvm\v16.15.1\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1159:10) {
+  code: 'ER_BAD_DB_ERROR',
+  errno: 1049,
+  sqlMessage: "Unknown database 'blogdb'",
+  sqlState: '42000',
+  fatal: true
+}
+
+[2023/12/21:22.37.23] INFO file - ====== execute sql ======
+
+[2023/12/21:22.37.23] INFO file -  select count(*) as count from article
+
+[2023/12/21:22.37.23] ERROR file - Error: ER_BAD_DB_ERROR: Unknown database 'blogdb'
+    at Handshake.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Handshake.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Handshake.js:123:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Protocol._enqueue (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:48:16)
+    at Pool.query (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:202:8)
+    at F:\workspace\server-admin\src\common\dbHelper.ts:44:20
+    at new Promise (<anonymous>)
+    at Object.getArticleCount (F:\workspace\server-admin\src\common\dbHelper.ts:37:44)
+    at getArticleList (F:\workspace\server-admin\src\routes\article.ts:46:30)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32) {
+  code: 'ER_BAD_DB_ERROR',
+  errno: 1049,
+  sqlMessage: "Unknown database 'blogdb'",
+  sqlState: '42000',
+  fatal: true
+}
+
+[2023/12/21:22.37.35] INFO file - ====== execute sql ======
+
+[2023/12/21:22.37.35] INFO file -  select count(*) as count from article
+
+[2023/12/21:22.37.35] ERROR file - Error: ER_BAD_DB_ERROR: Unknown database 'blogdb'
+    at Handshake.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Handshake.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Handshake.js:123:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Protocol._enqueue (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:48:16)
+    at Pool.query (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:202:8)
+    at F:\workspace\server-admin\src\common\dbHelper.ts:44:20
+    at new Promise (<anonymous>)
+    at Object.getArticleCount (F:\workspace\server-admin\src\common\dbHelper.ts:37:44)
+    at getArticleList (F:\workspace\server-admin\src\routes\article.ts:46:30)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32) {
+  code: 'ER_BAD_DB_ERROR',
+  errno: 1049,
+  sqlMessage: "Unknown database 'blogdb'",
+  sqlState: '42000',
+  fatal: true
+}
+
+[2023/12/21:22.37.47] INFO file - creating pool
+
+[2023/12/21:22.37.47] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:22.37.47] ERROR file - Error: ER_BAD_DB_ERROR: Unknown database 'blogdb'
+    at Handshake.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Handshake.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Handshake.js:123:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Protocol._enqueue (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:48:16)
+    at Object.getConnection (F:\workspace\server-admin\src\common\dbPool.ts:19:8)
+    at Object.createDb (F:\workspace\server-admin\src\common\dbHelper.ts:7:3)
+    at Object.<anonymous> (F:\workspace\server-admin\src\dao\index.ts:14:1)
+    at Module._compile (node:internal/modules/cjs/loader:1105:14)
+    at Module.m._compile (E:\Program Files\Nvm\nvm\v16.15.1\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1159:10) {
+  code: 'ER_BAD_DB_ERROR',
+  errno: 1049,
+  sqlMessage: "Unknown database 'blogdb'",
+  sqlState: '42000',
+  fatal: true
+}
+
+[2023/12/21:22.38.02] INFO file - creating pool
+
+[2023/12/21:22.38.02] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:22.38.03] INFO file - ====== execute sql ======
+
+[2023/12/21:22.38.03] INFO file -  select count(*) as count from article
+
+[2023/12/21:22.38.03] ERROR file - Error: ER_BAD_DB_ERROR: Unknown database 'blogdb'
+    at Handshake.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Handshake.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Handshake.js:123:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Protocol._enqueue (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:48:16)
+    at Pool.query (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:202:8)
+    at F:\workspace\server-admin\src\common\dbHelper.ts:44:20
+    at new Promise (<anonymous>)
+    at Object.getArticleCount (F:\workspace\server-admin\src\common\dbHelper.ts:37:44)
+    at getArticleList (F:\workspace\server-admin\src\routes\article.ts:46:30)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32) {
+  code: 'ER_BAD_DB_ERROR',
+  errno: 1049,
+  sqlMessage: "Unknown database 'blogdb'",
+  sqlState: '42000',
+  fatal: true
+}
+
+[2023/12/21:22.38.05] INFO file - ====== execute sql ======
+
+[2023/12/21:22.38.05] INFO file -  select count(*) as count from article
+
+[2023/12/21:22.38.05] ERROR file - Error: ER_BAD_DB_ERROR: Unknown database 'blogdb'
+    at Handshake.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Handshake.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Handshake.js:123:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Protocol._enqueue (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:48:16)
+    at Pool.query (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:202:8)
+    at F:\workspace\server-admin\src\common\dbHelper.ts:44:20
+    at new Promise (<anonymous>)
+    at Object.getArticleCount (F:\workspace\server-admin\src\common\dbHelper.ts:37:44)
+    at getArticleList (F:\workspace\server-admin\src\routes\article.ts:46:30)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32) {
+  code: 'ER_BAD_DB_ERROR',
+  errno: 1049,
+  sqlMessage: "Unknown database 'blogdb'",
+  sqlState: '42000',
+  fatal: true
+}
+
+[2023/12/21:22.38.11] INFO file - creating pool
+
+[2023/12/21:22.38.11] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:22.38.11] ERROR file - Error: ER_BAD_DB_ERROR: Unknown database 'blogdb'
+    at Handshake.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Handshake.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Handshake.js:123:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Protocol._enqueue (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:48:16)
+    at Object.getConnection (F:\workspace\server-admin\src\common\dbPool.ts:19:8)
+    at createDb (F:\workspace\server-admin\src\common\dbHelper.ts:8:3)
+    at Object.<anonymous> (F:\workspace\server-admin\src\common\dbHelper.ts:37:1)
+    at Module._compile (node:internal/modules/cjs/loader:1105:14)
+    at Module.m._compile (E:\Program Files\Nvm\nvm\v16.15.1\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1159:10) {
+  code: 'ER_BAD_DB_ERROR',
+  errno: 1049,
+  sqlMessage: "Unknown database 'blogdb'",
+  sqlState: '42000',
+  fatal: true
+}
+
+[2023/12/21:22.38.34] INFO file - creating pool
+
+[2023/12/21:22.38.34] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:22.38.35] ERROR file - Error: ER_BAD_DB_ERROR: Unknown database 'blogdb'
+    at Handshake.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Handshake.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Handshake.js:123:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Protocol._enqueue (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:48:16)
+    at Object.getConnection (F:\workspace\server-admin\src\common\dbPool.ts:19:8)
+    at createDb (F:\workspace\server-admin\src\common\dbHelper.ts:10:3)
+    at Object.<anonymous> (F:\workspace\server-admin\src\common\dbHelper.ts:39:1)
+    at Module._compile (node:internal/modules/cjs/loader:1105:14)
+    at Module.m._compile (E:\Program Files\Nvm\nvm\v16.15.1\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1159:10) {
+  code: 'ER_BAD_DB_ERROR',
+  errno: 1049,
+  sqlMessage: "Unknown database 'blogdb'",
+  sqlState: '42000',
+  fatal: true
+}
+
+[2023/12/21:22.38.35] INFO file - ====== execute sql ======
+
+[2023/12/21:22.38.35] INFO file -  select count(*) as count from article
+
+[2023/12/21:22.38.35] ERROR file - Error: ER_BAD_DB_ERROR: Unknown database 'blogdb'
+    at Handshake.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Handshake.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Handshake.js:123:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Protocol._enqueue (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:48:16)
+    at Pool.query (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:202:8)
+    at F:\workspace\server-admin\src\common\dbHelper.ts:49:20
+    at new Promise (<anonymous>)
+    at Object.getArticleCount (F:\workspace\server-admin\src\common\dbHelper.ts:42:44)
+    at getArticleList (F:\workspace\server-admin\src\routes\article.ts:46:30)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32) {
+  code: 'ER_BAD_DB_ERROR',
+  errno: 1049,
+  sqlMessage: "Unknown database 'blogdb'",
+  sqlState: '42000',
+  fatal: true
+}
+
+[2023/12/21:22.38.38] INFO file - ====== execute sql ======
+
+[2023/12/21:22.38.38] INFO file -  select count(*) as count from article
+
+[2023/12/21:22.38.38] ERROR file - Error: ER_BAD_DB_ERROR: Unknown database 'blogdb'
+    at Handshake.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Handshake.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Handshake.js:123:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Protocol._enqueue (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:48:16)
+    at Pool.query (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:202:8)
+    at F:\workspace\server-admin\src\common\dbHelper.ts:49:20
+    at new Promise (<anonymous>)
+    at Object.getArticleCount (F:\workspace\server-admin\src\common\dbHelper.ts:42:44)
+    at getArticleList (F:\workspace\server-admin\src\routes\article.ts:46:30)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32) {
+  code: 'ER_BAD_DB_ERROR',
+  errno: 1049,
+  sqlMessage: "Unknown database 'blogdb'",
+  sqlState: '42000',
+  fatal: true
+}
+
+[2023/12/21:22.39.27] INFO file - creating pool
+
+[2023/12/21:22.39.27] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:22.39.27] ERROR file - Error: ER_BAD_DB_ERROR: Unknown database 'blogdb'
+    at Handshake.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Handshake.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Handshake.js:123:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Protocol._enqueue (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:48:16)
+    at Object.getConnection (F:\workspace\server-admin\src\common\dbPool.ts:19:8)
+    at createDb (F:\workspace\server-admin\src\common\dbHelper.ts:10:3)
+    at Object.<anonymous> (F:\workspace\server-admin\src\common\dbHelper.ts:40:1)
+    at Module._compile (node:internal/modules/cjs/loader:1105:14)
+    at Module.m._compile (E:\Program Files\Nvm\nvm\v16.15.1\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1159:10) {
+  code: 'ER_BAD_DB_ERROR',
+  errno: 1049,
+  sqlMessage: "Unknown database 'blogdb'",
+  sqlState: '42000',
+  fatal: true
+}
+
+[2023/12/21:22.39.53] INFO file - creating pool
+
+[2023/12/21:22.39.54] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:22.39.54] ERROR file - Error: ER_BAD_DB_ERROR: Unknown database 'blogdb'
+    at Handshake.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Handshake.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Handshake.js:123:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Protocol._enqueue (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:48:16)
+    at Object.getConnection (F:\workspace\server-admin\src\common\dbPool.ts:19:8)
+    at createDb (F:\workspace\server-admin\src\common\dbHelper.ts:10:3)
+    at Object.<anonymous> (F:\workspace\server-admin\src\common\dbHelper.ts:40:1)
+    at Module._compile (node:internal/modules/cjs/loader:1105:14)
+    at Module.m._compile (E:\Program Files\Nvm\nvm\v16.15.1\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1159:10) {
+  code: 'ER_BAD_DB_ERROR',
+  errno: 1049,
+  sqlMessage: "Unknown database 'blogdb'",
+  sqlState: '42000',
+  fatal: true
+}
+
+[2023/12/21:22.42.10] INFO file - creating pool
+
+[2023/12/21:22.42.10] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:22.42.11] ERROR file - Error: ER_BAD_DB_ERROR: Unknown database 'blogdb'
+    at Handshake.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Handshake.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Handshake.js:123:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Protocol._enqueue (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:48:16)
+    at Object.getConnection (F:\workspace\server-admin\src\common\dbPool.ts:19:8)
+    at createDb (F:\workspace\server-admin\src\common\dbHelper.ts:10:3)
+    at Object.<anonymous> (F:\workspace\server-admin\src\common\dbHelper.ts:37:1)
+    at Module._compile (node:internal/modules/cjs/loader:1105:14)
+    at Module.m._compile (E:\Program Files\Nvm\nvm\v16.15.1\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1159:10) {
+  code: 'ER_BAD_DB_ERROR',
+  errno: 1049,
+  sqlMessage: "Unknown database 'blogdb'",
+  sqlState: '42000',
+  fatal: true
+}
+
+[2023/12/21:22.42.36] INFO file - creating pool
+
+[2023/12/21:22.42.37] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:22.42.37] ERROR file - Error: ER_BAD_DB_ERROR: Unknown database 'blogdb'
+    at Handshake.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Handshake.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Handshake.js:123:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Protocol._enqueue (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:48:16)
+    at Object.getConnection (F:\workspace\server-admin\src\common\dbPool.ts:20:8)
+    at createDb (F:\workspace\server-admin\src\common\dbHelper.ts:10:3)
+    at Object.<anonymous> (F:\workspace\server-admin\src\common\dbHelper.ts:37:1)
+    at Module._compile (node:internal/modules/cjs/loader:1105:14)
+    at Module.m._compile (E:\Program Files\Nvm\nvm\v16.15.1\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1159:10) {
+  code: 'ER_BAD_DB_ERROR',
+  errno: 1049,
+  sqlMessage: "Unknown database 'blogdb'",
+  sqlState: '42000',
+  fatal: true
+}
+
+[2023/12/21:22.42.48] INFO file - creating pool
+
+[2023/12/21:22.42.49] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:22.42.49] ERROR file - Error: ER_BAD_DB_ERROR: Unknown database 'blogdb'
+    at Handshake.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Handshake.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Handshake.js:123:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Protocol._enqueue (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:48:16)
+    at Object.getConnection (F:\workspace\server-admin\src\common\dbPool.ts:20:8)
+    at createDb (F:\workspace\server-admin\src\common\dbHelper.ts:10:3)
+    at Object.<anonymous> (F:\workspace\server-admin\src\common\dbHelper.ts:37:1)
+    at Module._compile (node:internal/modules/cjs/loader:1105:14)
+    at Module.m._compile (E:\Program Files\Nvm\nvm\v16.15.1\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1159:10) {
+  code: 'ER_BAD_DB_ERROR',
+  errno: 1049,
+  sqlMessage: "Unknown database 'blogdb'",
+  sqlState: '42000',
+  fatal: true
+}
+
+[2023/12/21:22.43.12] INFO file - creating pool
+
+[2023/12/21:22.43.12] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:22.43.12] ERROR file - Error: ER_BAD_DB_ERROR: Unknown database 'blogdb'
+    at Handshake.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Handshake.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Handshake.js:123:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Protocol._enqueue (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:48:16)
+    at Object.getConnection (F:\workspace\server-admin\src\common\dbPool.ts:20:8)
+    at createDb (F:\workspace\server-admin\src\common\dbHelper.ts:10:3)
+    at Object.<anonymous> (F:\workspace\server-admin\src\common\dbHelper.ts:37:1)
+    at Module._compile (node:internal/modules/cjs/loader:1105:14)
+    at Module.m._compile (E:\Program Files\Nvm\nvm\v16.15.1\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1159:10) {
+  code: 'ER_BAD_DB_ERROR',
+  errno: 1049,
+  sqlMessage: "Unknown database 'blogdb'",
+  sqlState: '42000',
+  fatal: true
+}
+
+[2023/12/21:22.43.22] INFO file - creating pool
+
+[2023/12/21:22.43.23] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:22.43.23] ERROR file - Error: ER_BAD_DB_ERROR: Unknown database 'blogdb'
+    at Handshake.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Handshake.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Handshake.js:123:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Protocol._enqueue (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:48:16)
+    at Object.getConnection (F:\workspace\server-admin\src\common\dbPool.ts:19:8)
+    at createDb (F:\workspace\server-admin\src\common\dbHelper.ts:10:3)
+    at Object.<anonymous> (F:\workspace\server-admin\src\common\dbHelper.ts:37:1)
+    at Module._compile (node:internal/modules/cjs/loader:1105:14)
+    at Module.m._compile (E:\Program Files\Nvm\nvm\v16.15.1\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1159:10) {
+  code: 'ER_BAD_DB_ERROR',
+  errno: 1049,
+  sqlMessage: "Unknown database 'blogdb'",
+  sqlState: '42000',
+  fatal: true
+}
+
+[2023/12/21:22.43.31] INFO file - creating pool
+
+[2023/12/21:22.43.31] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:22.43.31] ERROR file - Error: ER_BAD_DB_ERROR: Unknown database 'blogdb'
+    at Handshake.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Handshake.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Handshake.js:123:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Protocol._enqueue (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:48:16)
+    at Object.getConnection (F:\workspace\server-admin\src\common\dbPool.ts:19:8)
+    at createDb (F:\workspace\server-admin\src\common\dbHelper.ts:10:3)
+    at Object.<anonymous> (F:\workspace\server-admin\src\common\dbHelper.ts:37:1)
+    at Module._compile (node:internal/modules/cjs/loader:1105:14)
+    at Module.m._compile (E:\Program Files\Nvm\nvm\v16.15.1\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1159:10) {
+  code: 'ER_BAD_DB_ERROR',
+  errno: 1049,
+  sqlMessage: "Unknown database 'blogdb'",
+  sqlState: '42000',
+  fatal: true
+}
+
+[2023/12/21:22.43.51] INFO file - creating pool
+
+[2023/12/21:22.43.52] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:22.43.52] ERROR file - Error: ER_BAD_DB_ERROR: Unknown database 'blogdb'
+    at Handshake.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Handshake.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Handshake.js:123:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Protocol._enqueue (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:48:16)
+    at Object.getConnection (F:\workspace\server-admin\src\common\dbPool.ts:19:8)
+    at createDb (F:\workspace\server-admin\src\common\dbHelper.ts:10:3)
+    at Object.<anonymous> (F:\workspace\server-admin\src\common\dbHelper.ts:37:1)
+    at Module._compile (node:internal/modules/cjs/loader:1105:14)
+    at Module.m._compile (E:\Program Files\Nvm\nvm\v16.15.1\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1159:10) {
+  code: 'ER_BAD_DB_ERROR',
+  errno: 1049,
+  sqlMessage: "Unknown database 'blogdb'",
+  sqlState: '42000',
+  fatal: true
+}
+
+[2023/12/21:22.45.54] INFO file - creating pool
+
+[2023/12/21:22.45.55] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:22.46.50] INFO file - creating pool
+
+[2023/12/21:22.46.51] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:22.47.02] INFO file - creating pool
+
+[2023/12/21:22.47.02] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:22.47.02] ERROR file - Error: ER_BAD_DB_ERROR: Unknown database 'blogdb'
+    at Handshake.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Handshake.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Handshake.js:123:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Protocol._enqueue (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:48:16)
+    at Object.getConnection (F:\workspace\server-admin\src\common\dbPool.ts:19:8)
+    at createDb (F:\workspace\server-admin\src\common\dbHelper.ts:10:3)
+    at Object.<anonymous> (F:\workspace\server-admin\src\common\dbHelper.ts:37:1)
+    at Module._compile (node:internal/modules/cjs/loader:1105:14)
+    at Module.m._compile (E:\Program Files\Nvm\nvm\v16.15.1\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1159:10) {
+  code: 'ER_BAD_DB_ERROR',
+  errno: 1049,
+  sqlMessage: "Unknown database 'blogdb'",
+  sqlState: '42000',
+  fatal: true
+}
+
+[2023/12/21:22.49.14] INFO file - creating pool
+
+[2023/12/21:22.49.15] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:22.49.15] ERROR file - Error: ER_BAD_DB_ERROR: Unknown database 'blogdb'
+    at Handshake.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Handshake.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Handshake.js:123:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Protocol._enqueue (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:48:16)
+    at Object.getConnection (F:\workspace\server-admin\src\common\dbPool.ts:19:8)
+    at createDb (F:\workspace\server-admin\src\common\dbHelper.ts:10:3)
+    at Object.<anonymous> (F:\workspace\server-admin\src\common\dbHelper.ts:37:1)
+    at Module._compile (node:internal/modules/cjs/loader:1105:14)
+    at Module.m._compile (E:\Program Files\Nvm\nvm\v16.15.1\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1159:10) {
+  code: 'ER_BAD_DB_ERROR',
+  errno: 1049,
+  sqlMessage: "Unknown database 'blogdb'",
+  sqlState: '42000',
+  fatal: true
+}
+
+[2023/12/21:22.51.57] INFO file - creating pool
+
+[2023/12/21:22.51.58] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:22.52.26] INFO file - creating pool
+
+[2023/12/21:22.52.26] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:22.52.50] INFO file - creating pool
+
+[2023/12/21:22.52.50] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:22.53.45] INFO file - creating pool
+
+[2023/12/21:22.53.45] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:22.53.45] ERROR file - Error: ER_BAD_DB_ERROR: Unknown database 'blogdb'
+    at Handshake.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Handshake.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Handshake.js:123:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Protocol._enqueue (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:48:16)
+    at Object.getConnection (F:\workspace\server-admin\src\common\dbPool.ts:21:8)
+    at createDb (F:\workspace\server-admin\src\common\dbHelper.ts:10:3)
+    at Object.<anonymous> (F:\workspace\server-admin\src\common\dbHelper.ts:37:1)
+    at Module._compile (node:internal/modules/cjs/loader:1105:14)
+    at Module.m._compile (E:\Program Files\Nvm\nvm\v16.15.1\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1159:10) {
+  code: 'ER_BAD_DB_ERROR',
+  errno: 1049,
+  sqlMessage: "Unknown database 'blogdb'",
+  sqlState: '42000',
+  fatal: true
+}
+
+[2023/12/21:22.56.16] INFO file - creating pool
+
+[2023/12/21:22.56.16] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:22.56.16] ERROR file - Error: ER_BAD_DB_ERROR: Unknown database 'blogdb'
+    at Handshake.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Handshake.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Handshake.js:123:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Protocol._enqueue (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:48:16)
+    at Object.getConnection (F:\workspace\server-admin\src\common\dbPool.ts:21:8)
+    at createDb (F:\workspace\server-admin\src\common\dbHelper.ts:10:3)
+    at Object.<anonymous> (F:\workspace\server-admin\src\common\dbHelper.ts:37:1)
+    at Module._compile (node:internal/modules/cjs/loader:1105:14)
+    at Module.m._compile (E:\Program Files\Nvm\nvm\v16.15.1\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1159:10) {
+  code: 'ER_BAD_DB_ERROR',
+  errno: 1049,
+  sqlMessage: "Unknown database 'blogdb'",
+  sqlState: '42000',
+  fatal: true
+}
+
+[2023/12/21:22.58.25] INFO file - creating pool
+
+[2023/12/21:22.58.26] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:22.58.26] ERROR file - Error: ER_BAD_DB_ERROR: Unknown database 'blogdb'
+    at Handshake.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Handshake.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Handshake.js:123:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Protocol._enqueue (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:48:16)
+    at Object.getConnection (F:\workspace\server-admin\src\common\dbPool.ts:20:8)
+    at createDb (F:\workspace\server-admin\src\common\dbHelper.ts:10:3)
+    at Object.<anonymous> (F:\workspace\server-admin\src\common\dbHelper.ts:37:1)
+    at Module._compile (node:internal/modules/cjs/loader:1105:14)
+    at Module.m._compile (E:\Program Files\Nvm\nvm\v16.15.1\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1159:10) {
+  code: 'ER_BAD_DB_ERROR',
+  errno: 1049,
+  sqlMessage: "Unknown database 'blogdb'",
+  sqlState: '42000',
+  fatal: true
+}
+
+[2023/12/21:22.58.36] INFO file - creating pool
+
+[2023/12/21:22.58.36] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:22.58.36] ERROR file - Error: ER_BAD_DB_ERROR: Unknown database 'blogdb'
+    at Handshake.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Handshake.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Handshake.js:123:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Protocol._enqueue (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:48:16)
+    at Object.getConnection (F:\workspace\server-admin\src\common\dbPool.ts:20:8)
+    at createDb (F:\workspace\server-admin\src\common\dbHelper.ts:10:3)
+    at Object.<anonymous> (F:\workspace\server-admin\src\common\dbHelper.ts:37:1)
+    at Module._compile (node:internal/modules/cjs/loader:1105:14)
+    at Module.m._compile (E:\Program Files\Nvm\nvm\v16.15.1\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1159:10) {
+  code: 'ER_BAD_DB_ERROR',
+  errno: 1049,
+  sqlMessage: "Unknown database 'blogdb'",
+  sqlState: '42000',
+  fatal: true
+}
+
+[2023/12/21:22.58.38] INFO file - creating pool
+
+[2023/12/21:22.58.39] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:23.02.29] INFO file - creating pool
+
+[2023/12/21:23.02.29] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:23.02.44] INFO file - ====== execute sql ======
+
+[2023/12/21:23.02.44] INFO file -  select count(*) as count from article
+
+[2023/12/21:23.02.44] ERROR file - Error: ER_NO_DB_ERROR: No database selected
+    at Query.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Pool.query (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:199:23)
+    at F:\workspace\server-admin\src\common\dbHelper.ts:45:20
+    at new Promise (<anonymous>)
+    at Object.getArticleCount (F:\workspace\server-admin\src\common\dbHelper.ts:38:44)
+    at getArticleList (F:\workspace\server-admin\src\routes\article.ts:46:30)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\src\middleware\jwt.ts:39:11
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18) {
+  code: 'ER_NO_DB_ERROR',
+  errno: 1046,
+  sqlMessage: 'No database selected',
+  sqlState: '3D000',
+  index: 0,
+  sql: 'select count(*) as count from article'
+}
+
+[2023/12/21:23.03.19] INFO file - creating pool
+
+[2023/12/21:23.03.19] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:23.04.02] INFO file - creating pool
+
+[2023/12/21:23.04.02] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:23.04.14] INFO file - creating pool
+
+[2023/12/21:23.04.14] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:23.04.25] INFO file - ====== execute sql ======
+
+[2023/12/21:23.04.25] INFO file -  select count(*) as count from article
+
+[2023/12/21:23.04.25] ERROR file - Error: ER_NO_DB_ERROR: No database selected
+    at Query.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Pool.query (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:199:23)
+    at F:\workspace\server-admin\src\common\dbHelper.ts:45:20
+    at new Promise (<anonymous>)
+    at Object.getArticleCount (F:\workspace\server-admin\src\common\dbHelper.ts:38:44)
+    at getArticleList (F:\workspace\server-admin\src\routes\article.ts:46:30)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\src\middleware\jwt.ts:39:11
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18) {
+  code: 'ER_NO_DB_ERROR',
+  errno: 1046,
+  sqlMessage: 'No database selected',
+  sqlState: '3D000',
+  index: 0,
+  sql: 'select count(*) as count from article'
+}
+
+[2023/12/21:23.05.51] INFO file - creating pool
+
+[2023/12/21:23.05.51] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:23.05.53] INFO file - ====== execute sql ======
+
+[2023/12/21:23.05.53] INFO file -  select count(*) as count from article
+
+[2023/12/21:23.05.53] ERROR file - Error: ER_NO_DB_ERROR: No database selected
+    at Query.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Pool.query (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:199:23)
+    at F:\workspace\server-admin\src\common\dbHelper.ts:45:20
+    at new Promise (<anonymous>)
+    at Object.getArticleCount (F:\workspace\server-admin\src\common\dbHelper.ts:38:44)
+    at getArticleList (F:\workspace\server-admin\src\routes\article.ts:46:30)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\src\middleware\jwt.ts:39:11
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18) {
+  code: 'ER_NO_DB_ERROR',
+  errno: 1046,
+  sqlMessage: 'No database selected',
+  sqlState: '3D000',
+  index: 0,
+  sql: 'select count(*) as count from article'
+}
+
+[2023/12/21:23.05.55] INFO file - ====== execute sql ======
+
+[2023/12/21:23.05.55] INFO file -  select count(*) as count from article
+
+[2023/12/21:23.05.55] ERROR file - Error: ER_NO_SUCH_TABLE: Table 'blogdb.article' doesn't exist
+    at Query.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Pool.query (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:199:23)
+    at F:\workspace\server-admin\src\common\dbHelper.ts:45:20
+    at new Promise (<anonymous>)
+    at Object.getArticleCount (F:\workspace\server-admin\src\common\dbHelper.ts:38:44)
+    at getArticleList (F:\workspace\server-admin\src\routes\article.ts:46:30)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\src\middleware\jwt.ts:39:11
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18) {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlMessage: "Table 'blogdb.article' doesn't exist",
+  sqlState: '42S02',
+  index: 0,
+  sql: 'select count(*) as count from article'
+}
+
+[2023/12/21:23.06.02] INFO file - ====== execute sql ======
+
+[2023/12/21:23.06.02] INFO file -  select count(*) as count from article
+
+[2023/12/21:23.06.02] ERROR file - Error: ER_NO_DB_ERROR: No database selected
+    at Query.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Pool.query (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:199:23)
+    at F:\workspace\server-admin\src\common\dbHelper.ts:45:20
+    at new Promise (<anonymous>)
+    at Object.getArticleCount (F:\workspace\server-admin\src\common\dbHelper.ts:38:44)
+    at getArticleList (F:\workspace\server-admin\src\routes\article.ts:46:30)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\src\middleware\jwt.ts:39:11
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18) {
+  code: 'ER_NO_DB_ERROR',
+  errno: 1046,
+  sqlMessage: 'No database selected',
+  sqlState: '3D000',
+  index: 0,
+  sql: 'select count(*) as count from article'
+}
+
+[2023/12/21:23.08.27] INFO file - creating pool
+
+[2023/12/21:23.08.28] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:23.09.03] INFO file - creating pool
+
+[2023/12/21:23.09.03] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:23.09.17] INFO file - creating pool
+
+[2023/12/21:23.09.18] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:23.09.33] INFO file - ====== execute sql ======
+
+[2023/12/21:23.09.33] INFO file -  select count(*) as count from article
+
+[2023/12/21:23.09.33] ERROR file - Error: ER_NO_DB_ERROR: No database selected
+    at Query.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Pool.query (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:199:23)
+    at F:\workspace\server-admin\src\common\dbHelper.ts:45:20
+    at new Promise (<anonymous>)
+    at Object.getArticleCount (F:\workspace\server-admin\src\common\dbHelper.ts:38:44)
+    at getArticleList (F:\workspace\server-admin\src\routes\article.ts:46:30)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\src\middleware\jwt.ts:39:11
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18) {
+  code: 'ER_NO_DB_ERROR',
+  errno: 1046,
+  sqlMessage: 'No database selected',
+  sqlState: '3D000',
+  index: 0,
+  sql: 'select count(*) as count from article'
+}
+
+[2023/12/21:23.10.20] INFO file - creating pool
+
+[2023/12/21:23.10.21] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:23.10.33] INFO file - creating pool
+
+[2023/12/21:23.10.34] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:23.10.41] INFO file - ====== execute sql ======
+
+[2023/12/21:23.10.41] INFO file -  select count(*) as count from article
+
+[2023/12/21:23.10.41] ERROR file - Error: ER_NO_DB_ERROR: No database selected
+    at Query.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Pool.query (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:199:23)
+    at F:\workspace\server-admin\src\common\dbHelper.ts:45:20
+    at new Promise (<anonymous>)
+    at Object.getArticleCount (F:\workspace\server-admin\src\common\dbHelper.ts:38:44)
+    at getArticleList (F:\workspace\server-admin\src\routes\article.ts:46:30)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\src\middleware\jwt.ts:39:11
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18) {
+  code: 'ER_NO_DB_ERROR',
+  errno: 1046,
+  sqlMessage: 'No database selected',
+  sqlState: '3D000',
+  index: 0,
+  sql: 'select count(*) as count from article'
+}
+
+[2023/12/21:23.10.42] INFO file - ====== execute sql ======
+
+[2023/12/21:23.10.42] INFO file -  select count(*) as count from article
+
+[2023/12/21:23.10.42] ERROR file - Error: ER_NO_DB_ERROR: No database selected
+    at Query.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Pool.query (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:199:23)
+    at F:\workspace\server-admin\src\common\dbHelper.ts:45:20
+    at new Promise (<anonymous>)
+    at Object.getArticleCount (F:\workspace\server-admin\src\common\dbHelper.ts:38:44)
+    at getArticleList (F:\workspace\server-admin\src\routes\article.ts:46:30)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\src\middleware\jwt.ts:39:11
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18) {
+  code: 'ER_NO_DB_ERROR',
+  errno: 1046,
+  sqlMessage: 'No database selected',
+  sqlState: '3D000',
+  index: 0,
+  sql: 'select count(*) as count from article'
+}
+
+[2023/12/21:23.10.58] INFO file - ====== execute sql ======
+
+[2023/12/21:23.10.58] INFO file - insert into article set ? {
+  title: 'test',
+  content: 'string',
+  introduction: 'string,sdfg',
+  tags: 'string,wertwer',
+  type: 1,
+  images: 'strig',
+  create_time: 1703171458817,
+  edit_time: 1703171458817
+}
+
+[2023/12/21:23.10.58] ERROR file - Error: ER_NO_DB_ERROR: No database selected
+    at Query.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Pool.query (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:199:23)
+    at F:\workspace\server-admin\src\common\dbHelper.ts:46:15
+    at new Promise (<anonymous>)
+    at Object.newArticle (F:\workspace\server-admin\src\common\dbHelper.ts:38:44)
+    at register (F:\workspace\server-admin\src\routes\article.ts:18:33)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\src\middleware\jwt.ts:39:11
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18) {
+  code: 'ER_NO_DB_ERROR',
+  errno: 1046,
+  sqlMessage: 'No database selected',
+  sqlState: '3D000',
+  index: 0,
+  sql: "insert into article set `title` = 'test', `content` = 'string', `introduction` = 'string,sdfg', `tags` = 'string,wertwer', `type` = 1, `images` = 'strig', `create_time` = 1703171458817, `edit_time` = 1703171458817"
+}
+
+[2023/12/21:23.11.19] INFO file - creating pool
+
+[2023/12/21:23.11.20] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:23.11.20] INFO file - ====== execute sql ======
+
+[2023/12/21:23.11.20] INFO file - insert into article set ? {
+  title: 'test',
+  content: 'string',
+  introduction: 'string,sdfg',
+  tags: 'string,wertwer',
+  type: 1,
+  images: 'strig',
+  create_time: 1703171480656,
+  edit_time: 1703171480656
+}
+
+[2023/12/21:23.11.20] ERROR file - Error: ER_NO_DB_ERROR: No database selected
+    at Query.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Pool.query (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:199:23)
+    at F:\workspace\server-admin\src\common\dbHelper.ts:46:15
+    at new Promise (<anonymous>)
+    at Object.newArticle (F:\workspace\server-admin\src\common\dbHelper.ts:38:44)
+    at register (F:\workspace\server-admin\src\routes\article.ts:18:33)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\src\middleware\jwt.ts:39:11
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18) {
+  code: 'ER_NO_DB_ERROR',
+  errno: 1046,
+  sqlMessage: 'No database selected',
+  sqlState: '3D000',
+  index: 0,
+  sql: "insert into article set `title` = 'test', `content` = 'string', `introduction` = 'string,sdfg', `tags` = 'string,wertwer', `type` = 1, `images` = 'strig', `create_time` = 1703171480656, `edit_time` = 1703171480656"
+}
+
+[2023/12/21:23.13.16] INFO file - creating pool
+
+[2023/12/21:23.13.16] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:23.13.19] INFO file - ====== execute sql ======
+
+[2023/12/21:23.13.19] INFO file - insert into article set ? {
+  title: 'test',
+  content: 'string',
+  introduction: 'string,sdfg',
+  tags: 'string,wertwer',
+  type: 1,
+  images: 'strig',
+  create_time: 1703171599255,
+  edit_time: 1703171599255
+}
+
+[2023/12/21:23.13.19] ERROR file - Error: ER_NO_DB_ERROR: No database selected
+    at Query.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Pool.query (F:\workspace\server-admin\node_modules\mysql\lib\Pool.js:199:23)
+    at F:\workspace\server-admin\src\common\dbHelper.ts:47:15
+    at new Promise (<anonymous>)
+    at Object.newArticle (F:\workspace\server-admin\src\common\dbHelper.ts:38:44)
+    at register (F:\workspace\server-admin\src\routes\article.ts:18:33)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\src\middleware\jwt.ts:39:11
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18) {
+  code: 'ER_NO_DB_ERROR',
+  errno: 1046,
+  sqlMessage: 'No database selected',
+  sqlState: '3D000',
+  index: 0,
+  sql: "insert into article set `title` = 'test', `content` = 'string', `introduction` = 'string,sdfg', `tags` = 'string,wertwer', `type` = 1, `images` = 'strig', `create_time` = 1703171599255, `edit_time` = 1703171599255"
+}
+
+[2023/12/21:23.16.39] INFO file - creating pool
+
+[2023/12/21:23.16.40] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:23.16.44] INFO file - ====== execute sql ======
+
+[2023/12/21:23.16.44] INFO file - insert into article set ? {
+  title: 'test',
+  content: 'string',
+  introduction: 'string,sdfg',
+  tags: 'string,wertwer',
+  type: 1,
+  images: 'strig',
+  create_time: 1703171804019,
+  edit_time: 1703171804019
+}
+
+[2023/12/21:23.16.49] INFO file - ====== execute sql ======
+
+[2023/12/21:23.16.49] INFO file -  select count(*) as count from article
+
+[2023/12/21:23.16.49] INFO file - ====== execute sql ======
+
+[2023/12/21:23.16.49] INFO file -  select * from article order by create_time desc limit 0,10
+
+[2023/12/21:23.16.56] INFO file - ====== execute sql ======
+
+[2023/12/21:23.16.56] INFO file -  select count(*) as count from article
+
+[2023/12/21:23.16.56] INFO file - ====== execute sql ======
+
+[2023/12/21:23.16.56] INFO file -  select * from article order by create_time desc limit 0,10
+
+[2023/12/21:23.17.24] INFO file - creating pool
+
+[2023/12/21:23.17.24] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:23.17.33] INFO file - ====== execute sql ======
+
+[2023/12/21:23.17.33] INFO file -  select count(*) as count from article
+
+[2023/12/21:23.17.33] INFO file - ====== execute sql ======
+
+[2023/12/21:23.17.33] INFO file -  select * from article order by create_time desc limit 0,10
+
+[2023/12/21:23.21.59] INFO file - creating pool
+
+[2023/12/21:23.21.59] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:23.25.37] INFO file - creating pool
+
+[2023/12/21:23.25.38] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:23.26.54] INFO file - creating pool
+
+[2023/12/21:23.26.55] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:23.26.59] INFO file - creating pool
+
+[2023/12/21:23.26.59] INFO file - === app server running on port 8080 ===
+
+[2023/12/21:23.43.24] INFO file - creating pool
+
+[2023/12/21:23.43.24] INFO file - === app server running on port 8080 ===
+

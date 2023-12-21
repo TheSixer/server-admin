@@ -11,6 +11,8 @@ import addRouter from './router'
 import tpl from './middleware/tpl'
 import errorHandler from './middleware/error'
 
+require('dotenv').config();
+
 const app = new koa()
 const router = new koaRouter({ prefix: '/api/v1' });
 const baseDir = path.normalize(__dirname + '/..')
