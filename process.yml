@@ -13,12 +13,12 @@ apps:
     env:
       PORT: 3000
       NODE_ENV: development
-      DB_HOST: 'localhost'
-      DB_USER: 'root'
-      DB_PWD: 'admin'
+      DB_HOST: 'rm-cn-o493j8lce0002mvo.rwlb.rds.aliyuncs.com'
+      DB_USER: 'autu'
+      DB_PWD: 'Longjia3713'
     env_production:
       PORT: 3010
       NODE_ENV: production
-      DB_HOST: 'localhost'
+      DB_HOST: 'coin-pay-db-prod.cuvdo49gxg4c.ap-southeast-2.rds.amazonaws.com'
       DB_USER: 'admin'
       DB_PWD: 'Autu_2022_2022'

@@ -8,7 +8,7 @@ import { objCamelCase } from '../utils';
 @Controller('/article')
 export default class Sign {
 
-  @post('/new')
+  @post('/new', true)
   async register(ctx: Context) {
     const params = cloneDeep(ctx.request.body);
     params.tags = params.tags;

@@ -14,7 +14,8 @@ const jwt: MiddleWare = (path: string, isVerify: boolean) => async (ctx, next) =
     const token = jsonWebToken.sign(payload, app.secret, { expiresIn: exp || app.exp });
     ctx.set('Authorization', token);
   };
-  if (isVerify && path === ctx.path) {
+
+  if (isVerify && ctx.path?.endsWith(path)) {
     if (!ctx.header || !ctx.header.authorization) {
       // ctx.status = 401;
       ctx.body = { code: 401, msg: 'Authorization not exist' };

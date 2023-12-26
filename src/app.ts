@@ -10,11 +10,12 @@ import log from './common/logger'
 import addRouter from './router'
 import tpl from './middleware/tpl'
 import errorHandler from './middleware/error'
+import { PREFIX } from './constant'
 
 require('dotenv').config();
 
 const app = new koa()
-const router = new koaRouter({ prefix: '/api/v1' });
+const router = new koaRouter({ prefix: PREFIX });
 const baseDir = path.normalize(__dirname + '/..')
 
 app.use(cors({

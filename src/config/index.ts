@@ -54,6 +54,6 @@ export const log4js = {
 export const qiniuKey = {
   accessKey: '-gGqu-NdqrbDd42vK_vB67uE6ZdoDYs6pXzpcVb3',
   secretKey: 'Oa0VkEUqxsvD76eW7gSfjyz0fIgPDfB-ss8bTRPs',
-  bucket: 'jxdlr-blog',
-  origin: 'http://qq56pqhh5.hn-bkt.clouddn.com/',
+  bucket: 'autu-forum',
+  origin: 'http://s62oumv7u.hn-bkt.clouddn.com/',
 };

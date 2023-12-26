@@ -2,7 +2,7 @@ import crypto from 'crypto'
 import { v4 as uuid } from 'uuid'
 import * as dao from '../dao'
 import { Context } from 'koa';
-import { Controller, post } from '../decorator/httpMethod'
+import { Controller, get, post } from '../decorator/httpMethod'
 
 const makeSalt = () => Math.round((new Date().valueOf() * Math.random())) + '';//generate salt
 const encryptPass = (pass: string, salt: string) => crypto.createHash('md5').update(pass + salt).digest('hex');// generate md5
@@ -31,18 +31,38 @@ export default class Sign {
       };
     }
     await ctx.sign({ uid: users[0].id, email });
+    const { authorization: token } = ctx.response.header;
     return ctx.body = {
       code: 0,
       msg: '登录成功',
-      data: users[0]
+      data: { ...users[0], token }
     };
+  }
+
+  @get('/user/info', true)
+  async getUserInfo(ctx: Context) {
+    const { token } = ctx.state;
+    const id = token?.uid;
+    const users = await dao.getUser({ id });
+    if (!id || !users.length) {
+      return ctx.body = {
+        code: 2,
+        msg: '用户不存在'
+      };
+    }
+
+    return ctx.body = {
+      code: 0,
+      msg: '注册成功！',
+      data: users[0],
+    }
   }
 
   @post('/register')
   async register(ctx: Context) {
-    const { email, password } = ctx.request.body;
+    const { email, password: pwd } = ctx.request.body;
     const salt = makeSalt();
-    const hash_password = encryptPass(password, salt);
+    const hash_password = encryptPass(pwd, salt);
 
     const countRet = await dao.count({ email });
     if (countRet[0].count > 0) {

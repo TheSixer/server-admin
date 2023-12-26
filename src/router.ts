@@ -23,7 +23,7 @@ const addRouter = (router: Router) => {
     );
     const routerMap: RouteMeta[] = Reflect.getMetadata(ROUTER_MAP, m, 'method') || [];
     if (routerMap.length) {
-      const ctr = new m();
+      const ctr: any = new m();
       routerMap.forEach(route => {
         const { name, method, path, isVerify } = route;
         router[method](routesMetadata + path, jwt(path, isVerify), ctr[name]);

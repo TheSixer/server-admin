@@ -12460,3 +12460,1658 @@
 
 [2023/12/21:23.43.24] INFO file - === app server running on port 8080 ===
 
+[2023/12/22:21.13.41] INFO file - creating pool
+
+[2023/12/22:21.13.42] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:21.28.19] INFO file - creating pool
+
+[2023/12/22:21.28.20] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:21.29.19] INFO file - creating pool
+
+[2023/12/22:21.29.19] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:21.30.20] INFO file - creating pool
+
+[2023/12/22:21.30.21] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:21.30.46] INFO file - creating pool
+
+[2023/12/22:21.30.46] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:21.31.44] INFO file - creating pool
+
+[2023/12/22:21.31.44] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:21.32.07] INFO file - creating pool
+
+[2023/12/22:21.32.07] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:21.32.55] INFO file - creating pool
+
+[2023/12/22:21.32.55] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:21.33.09] INFO file - creating pool
+
+[2023/12/22:21.33.09] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:21.33.34] INFO file - creating pool
+
+[2023/12/22:21.33.34] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:21.33.47] INFO file - creating pool
+
+[2023/12/22:21.33.48] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:21.34.14] INFO file - creating pool
+
+[2023/12/22:21.34.14] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:21.34.37] INFO file - creating pool
+
+[2023/12/22:21.34.37] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:21.35.01] INFO file - creating pool
+
+[2023/12/22:21.35.02] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:21.35.26] INFO file - creating pool
+
+[2023/12/22:21.35.27] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:21.35.35] INFO file - creating pool
+
+[2023/12/22:21.35.35] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:21.35.54] INFO file - creating pool
+
+[2023/12/22:21.35.55] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:21.36.15] INFO file - creating pool
+
+[2023/12/22:21.36.15] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:21.36.35] INFO file - ====== execute sql ======
+
+[2023/12/22:21.36.35] INFO file - insert into article set ? {
+  title: 'test',
+  content: 'string',
+  introduction: 'string,sdfg',
+  tags: 'string,wertwer',
+  type: 1,
+  images: 'strig',
+  create_time: 1703252195774,
+  edit_time: 1703252195774
+}
+
+[2023/12/22:21.36.35] ERROR file - Error: ER_NO_DB_ERROR: No database selected
+    at Query.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Protocol._enqueue (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:198:25)
+    at F:\workspace\server-admin\src\common\dbHelper.ts:47:15
+    at new Promise (<anonymous>)
+    at Object.newArticle (F:\workspace\server-admin\src\common\dbHelper.ts:39:44)
+    at register (F:\workspace\server-admin\src\routes\article.ts:18:33)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\src\middleware\jwt.ts:39:11
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32) {
+  code: 'ER_NO_DB_ERROR',
+  errno: 1046,
+  sqlMessage: 'No database selected',
+  sqlState: '3D000',
+  index: 0,
+  sql: "insert into article set `title` = 'test', `content` = 'string', `introduction` = 'string,sdfg', `tags` = 'string,wertwer', `type` = 1, `images` = 'strig', `create_time` = 1703252195774, `edit_time` = 1703252195774"
+}
+
+[2023/12/22:21.36.39] INFO file - ====== execute sql ======
+
+[2023/12/22:21.36.39] INFO file - insert into article set ? {
+  title: 'test',
+  content: 'string',
+  introduction: 'string,sdfg',
+  tags: 'string,wertwer',
+  type: 1,
+  images: 'strig',
+  create_time: 1703252199400,
+  edit_time: 1703252199400
+}
+
+[2023/12/22:21.36.39] ERROR file - Error: ER_NO_DB_ERROR: No database selected
+    at Query.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Protocol._enqueue (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:198:25)
+    at F:\workspace\server-admin\src\common\dbHelper.ts:47:15
+    at new Promise (<anonymous>)
+    at Object.newArticle (F:\workspace\server-admin\src\common\dbHelper.ts:39:44)
+    at register (F:\workspace\server-admin\src\routes\article.ts:18:33)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\src\middleware\jwt.ts:39:11
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32) {
+  code: 'ER_NO_DB_ERROR',
+  errno: 1046,
+  sqlMessage: 'No database selected',
+  sqlState: '3D000',
+  index: 0,
+  sql: "insert into article set `title` = 'test', `content` = 'string', `introduction` = 'string,sdfg', `tags` = 'string,wertwer', `type` = 1, `images` = 'strig', `create_time` = 1703252199400, `edit_time` = 1703252199400"
+}
+
+[2023/12/22:21.37.03] INFO file - creating pool
+
+[2023/12/22:21.37.03] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:21.37.34] INFO file - creating pool
+
+[2023/12/22:21.37.35] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:21.39.46] INFO file - creating pool
+
+[2023/12/22:21.39.46] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:21.39.54] INFO file - creating pool
+
+[2023/12/22:21.39.54] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:21.40.14] INFO file - creating pool
+
+[2023/12/22:21.40.14] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:21.40.32] INFO file - creating pool
+
+[2023/12/22:21.40.32] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:21.40.51] INFO file - creating pool
+
+[2023/12/22:21.40.52] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:21.40.57] INFO file - ====== execute sql ======
+
+[2023/12/22:21.40.57] INFO file - insert into article set ? {
+  title: 'test',
+  content: 'string',
+  introduction: 'string,sdfg',
+  tags: 'string,wertwer',
+  type: 1,
+  images: 'strig',
+  create_time: 1703252457322,
+  edit_time: 1703252457322
+}
+
+[2023/12/22:21.40.57] ERROR file - Error: ER_NO_DB_ERROR: No database selected
+    at Query.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Protocol._enqueue (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:198:25)
+    at F:\workspace\server-admin\src\common\dbHelper.ts:47:15
+    at new Promise (<anonymous>)
+    at Object.newArticle (F:\workspace\server-admin\src\common\dbHelper.ts:39:44)
+    at register (F:\workspace\server-admin\src\routes\article.ts:18:33)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\src\middleware\jwt.ts:39:11
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32) {
+  code: 'ER_NO_DB_ERROR',
+  errno: 1046,
+  sqlMessage: 'No database selected',
+  sqlState: '3D000',
+  index: 0,
+  sql: "insert into article set `title` = 'test', `content` = 'string', `introduction` = 'string,sdfg', `tags` = 'string,wertwer', `type` = 1, `images` = 'strig', `create_time` = 1703252457322, `edit_time` = 1703252457322"
+}
+
+[2023/12/22:21.40.58] INFO file - ====== execute sql ======
+
+[2023/12/22:21.40.58] INFO file - insert into article set ? {
+  title: 'test',
+  content: 'string',
+  introduction: 'string,sdfg',
+  tags: 'string,wertwer',
+  type: 1,
+  images: 'strig',
+  create_time: 1703252458340,
+  edit_time: 1703252458340
+}
+
+[2023/12/22:21.40.58] ERROR file - Error: ER_NO_DB_ERROR: No database selected
+    at Query.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Protocol._enqueue (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:198:25)
+    at F:\workspace\server-admin\src\common\dbHelper.ts:47:15
+    at new Promise (<anonymous>)
+    at Object.newArticle (F:\workspace\server-admin\src\common\dbHelper.ts:39:44)
+    at register (F:\workspace\server-admin\src\routes\article.ts:18:33)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\src\middleware\jwt.ts:39:11
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32) {
+  code: 'ER_NO_DB_ERROR',
+  errno: 1046,
+  sqlMessage: 'No database selected',
+  sqlState: '3D000',
+  index: 0,
+  sql: "insert into article set `title` = 'test', `content` = 'string', `introduction` = 'string,sdfg', `tags` = 'string,wertwer', `type` = 1, `images` = 'strig', `create_time` = 1703252458340, `edit_time` = 1703252458340"
+}
+
+[2023/12/22:21.42.34] INFO file - creating pool
+
+[2023/12/22:21.42.34] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:21.43.33] INFO file - creating pool
+
+[2023/12/22:21.43.34] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:21.43.53] INFO file - creating pool
+
+[2023/12/22:21.43.54] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:21.44.57] INFO file - creating pool
+
+[2023/12/22:21.44.58] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:21.45.03] INFO file - creating pool
+
+[2023/12/22:21.45.03] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:21.45.13] INFO file - creating pool
+
+[2023/12/22:21.45.13] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:21.45.27] INFO file - creating pool
+
+[2023/12/22:21.45.28] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:21.45.57] INFO file - ====== execute sql ======
+
+[2023/12/22:21.45.57] INFO file - insert into article set ? {
+  title: 'test',
+  content: 'string',
+  introduction: 'string,sdfg',
+  tags: 'string,wertwer',
+  type: 1,
+  images: 'strig',
+  create_time: 1703252757724,
+  edit_time: 1703252757724
+}
+
+[2023/12/22:21.45.57] ERROR file - Error: ER_NO_DB_ERROR: No database selected
+    at Query.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Protocol._enqueue (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:198:25)
+    at F:\workspace\server-admin\src\common\dbHelper.ts:48:15
+    at new Promise (<anonymous>)
+    at Object.newArticle (F:\workspace\server-admin\src\common\dbHelper.ts:40:44)
+    at register (F:\workspace\server-admin\src\routes\article.ts:18:33)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\src\middleware\jwt.ts:39:11
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32) {
+  code: 'ER_NO_DB_ERROR',
+  errno: 1046,
+  sqlMessage: 'No database selected',
+  sqlState: '3D000',
+  index: 0,
+  sql: "insert into article set `title` = 'test', `content` = 'string', `introduction` = 'string,sdfg', `tags` = 'string,wertwer', `type` = 1, `images` = 'strig', `create_time` = 1703252757724, `edit_time` = 1703252757724"
+}
+
+[2023/12/22:21.46.45] INFO file - creating pool
+
+[2023/12/22:21.46.45] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:21.46.59] INFO file - creating pool
+
+[2023/12/22:21.46.59] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:21.49.29] INFO file - creating pool
+
+[2023/12/22:21.49.29] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:21.49.48] INFO file - creating pool
+
+[2023/12/22:21.49.48] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:21.49.57] INFO file - creating pool
+
+[2023/12/22:21.49.58] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:21.50.20] INFO file - creating pool
+
+[2023/12/22:21.50.20] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:21.51.00] INFO file - ====== execute sql ======
+
+[2023/12/22:21.51.00] INFO file - insert into article set ? {
+  title: 'test',
+  content: 'string',
+  introduction: 'string,sdfg',
+  tags: 'string,wertwer',
+  type: 1,
+  images: 'strig',
+  create_time: 1703253060885,
+  edit_time: 1703253060885
+}
+
+[2023/12/22:21.51.00] ERROR file - Error: ER_NO_DB_ERROR: No database selected
+    at Query.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Protocol._enqueue (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:198:25)
+    at F:\workspace\server-admin\src\common\dbHelper.ts:48:15
+    at new Promise (<anonymous>)
+    at Object.newArticle (F:\workspace\server-admin\src\common\dbHelper.ts:40:44)
+    at register (F:\workspace\server-admin\src\routes\article.ts:18:33)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\src\middleware\jwt.ts:39:11
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32) {
+  code: 'ER_NO_DB_ERROR',
+  errno: 1046,
+  sqlMessage: 'No database selected',
+  sqlState: '3D000',
+  index: 0,
+  sql: "insert into article set `title` = 'test', `content` = 'string', `introduction` = 'string,sdfg', `tags` = 'string,wertwer', `type` = 1, `images` = 'strig', `create_time` = 1703253060885, `edit_time` = 1703253060885"
+}
+
+[2023/12/22:21.51.54] INFO file - creating pool
+
+[2023/12/22:21.51.55] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:21.52.11] INFO file - creating pool
+
+[2023/12/22:21.52.12] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:21.53.40] INFO file - ====== execute sql ======
+
+[2023/12/22:21.53.40] INFO file - insert into article set ? {
+  title: 'test',
+  content: 'string',
+  introduction: 'string,sdfg',
+  tags: 'string,wertwer',
+  type: 1,
+  images: 'strig',
+  create_time: 1703253220075,
+  edit_time: 1703253220075
+}
+
+[2023/12/22:21.53.40] ERROR file - Error: ER_NO_DB_ERROR: No database selected
+    at Query.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Protocol._enqueue (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:198:25)
+    at F:\workspace\server-admin\src\common\dbHelper.ts:48:15
+    at new Promise (<anonymous>)
+    at Object.newArticle (F:\workspace\server-admin\src\common\dbHelper.ts:40:44)
+    at register (F:\workspace\server-admin\src\routes\article.ts:18:33)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\src\middleware\jwt.ts:39:11
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32) {
+  code: 'ER_NO_DB_ERROR',
+  errno: 1046,
+  sqlMessage: 'No database selected',
+  sqlState: '3D000',
+  index: 0,
+  sql: "insert into article set `title` = 'test', `content` = 'string', `introduction` = 'string,sdfg', `tags` = 'string,wertwer', `type` = 1, `images` = 'strig', `create_time` = 1703253220075, `edit_time` = 1703253220075"
+}
+
+[2023/12/22:21.53.41] INFO file - ====== execute sql ======
+
+[2023/12/22:21.53.41] INFO file - insert into article set ? {
+  title: 'test',
+  content: 'string',
+  introduction: 'string,sdfg',
+  tags: 'string,wertwer',
+  type: 1,
+  images: 'strig',
+  create_time: 1703253221174,
+  edit_time: 1703253221174
+}
+
+[2023/12/22:21.53.41] ERROR file - Error: ER_NO_DB_ERROR: No database selected
+    at Query.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Protocol._enqueue (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:198:25)
+    at F:\workspace\server-admin\src\common\dbHelper.ts:48:15
+    at new Promise (<anonymous>)
+    at Object.newArticle (F:\workspace\server-admin\src\common\dbHelper.ts:40:44)
+    at register (F:\workspace\server-admin\src\routes\article.ts:18:33)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\src\middleware\jwt.ts:39:11
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32) {
+  code: 'ER_NO_DB_ERROR',
+  errno: 1046,
+  sqlMessage: 'No database selected',
+  sqlState: '3D000',
+  index: 0,
+  sql: "insert into article set `title` = 'test', `content` = 'string', `introduction` = 'string,sdfg', `tags` = 'string,wertwer', `type` = 1, `images` = 'strig', `create_time` = 1703253221174, `edit_time` = 1703253221174"
+}
+
+[2023/12/22:21.54.24] INFO file - creating pool
+
+[2023/12/22:21.54.24] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:21.55.39] INFO file - creating pool
+
+[2023/12/22:21.55.39] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:21.55.50] INFO file - creating pool
+
+[2023/12/22:21.55.51] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:21.57.25] INFO file - creating pool
+
+[2023/12/22:21.57.25] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:21.58.08] INFO file - creating pool
+
+[2023/12/22:21.58.09] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:22.00.17] INFO file - creating pool
+
+[2023/12/22:22.00.17] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:22.00.47] INFO file - creating pool
+
+[2023/12/22:22.00.47] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:22.03.33] INFO file - creating pool
+
+[2023/12/22:22.03.34] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:22.10.07] INFO file - creating pool
+
+[2023/12/22:22.10.07] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:22.14.34] INFO file - ====== execute sql ======
+
+[2023/12/22:22.14.34] INFO file - insert into article set ? {
+  title: 'test',
+  content: 'string',
+  introduction: 'string,sdfg',
+  tags: 'string,wertwer',
+  type: 1,
+  images: 'strig',
+  create_time: 1703254474280,
+  edit_time: 1703254474280
+}
+
+[2023/12/22:22.14.34] ERROR file - Error: ER_NO_DB_ERROR: No database selected
+    at Query.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    --------------------
+    at Protocol._enqueue (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:198:25)
+    at F:\workspace\server-admin\src\common\dbHelper.ts:47:15
+    at new Promise (<anonymous>)
+    at Object.newArticle (F:\workspace\server-admin\src\common\dbHelper.ts:39:44)
+    at register (F:\workspace\server-admin\src\routes\article.ts:18:33)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\src\middleware\jwt.ts:39:11
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32) {
+  code: 'ER_NO_DB_ERROR',
+  errno: 1046,
+  sqlMessage: 'No database selected',
+  sqlState: '3D000',
+  index: 0,
+  sql: "insert into article set `title` = 'test', `content` = 'string', `introduction` = 'string,sdfg', `tags` = 'string,wertwer', `type` = 1, `images` = 'strig', `create_time` = 1703254474280, `edit_time` = 1703254474280"
+}
+
+[2023/12/22:22.14.49] INFO file - creating pool
+
+[2023/12/22:22.14.49] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:22.15.10] INFO file - creating pool
+
+[2023/12/22:22.15.10] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:22.15.19] INFO file - ====== execute sql ======
+
+[2023/12/22:22.15.19] INFO file - insert into article set ? {
+  title: 'test',
+  content: 'string',
+  introduction: 'string,sdfg',
+  tags: 'string,wertwer',
+  type: 1,
+  images: 'strig',
+  create_time: 1703254519961,
+  edit_time: 1703254519961
+}
+
+[2023/12/22:22.15.30] INFO file - ====== execute sql ======
+
+[2023/12/22:22.15.30] INFO file - insert into article set ? {
+  title: 'test',
+  content: 'string',
+  introduction: 'string,sdfg',
+  tags: 'string,wertwer',
+  type: 1,
+  images: 'strig',
+  create_time: 1703254530417,
+  edit_time: 1703254530417
+}
+
+[2023/12/22:22.15.32] INFO file - ====== execute sql ======
+
+[2023/12/22:22.15.32] INFO file - insert into article set ? {
+  title: 'test',
+  content: 'string',
+  introduction: 'string,sdfg',
+  tags: 'string,wertwer',
+  type: 1,
+  images: 'strig',
+  create_time: 1703254532883,
+  edit_time: 1703254532883
+}
+
+[2023/12/22:22.16.30] INFO file - creating pool
+
+[2023/12/22:22.16.30] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:22.16.44] INFO file - creating pool
+
+[2023/12/22:22.16.44] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:22.17.03] INFO file - creating pool
+
+[2023/12/22:22.17.03] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:22.18.27] INFO file - creating pool
+
+[2023/12/22:22.18.28] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:22.18.38] INFO file - ====== execute sql ======
+
+[2023/12/22:22.18.38] INFO file -  select count(*) as count from article
+
+[2023/12/22:22.18.38] INFO file - ====== execute sql ======
+
+[2023/12/22:22.18.38] INFO file -  select * from article order by create_time desc limit 0,10
+
+[2023/12/22:22.18.48] INFO file - ====== execute sql ======
+
+[2023/12/22:22.18.48] INFO file - insert into article set ? {
+  title: 'test',
+  content: 'string',
+  introduction: 'string,sdfg',
+  tags: 'string,wertwer',
+  type: 1,
+  images: 'strig',
+  create_time: 1703254728481,
+  edit_time: 1703254728481
+}
+
+[2023/12/22:22.18.51] INFO file - ====== execute sql ======
+
+[2023/12/22:22.18.51] INFO file -  select count(*) as count from article
+
+[2023/12/22:22.18.51] INFO file - ====== execute sql ======
+
+[2023/12/22:22.18.51] INFO file -  select * from article order by create_time desc limit 0,10
+
+[2023/12/22:22.18.59] INFO file - creating pool
+
+[2023/12/22:22.18.59] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:22.19.06] INFO file - creating pool
+
+[2023/12/22:22.19.06] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:23.05.30] INFO file - creating pool
+
+[2023/12/22:23.05.31] INFO file - === app server running on port 8080 ===
+
+[2023/12/22:23.11.12] INFO file - ====== execute sql ======
+
+[2023/12/22:23.11.12] INFO file - insert into article set ? {
+  title: '测试发布文章',
+  type: '1',
+  tags: '股票',
+  content: '测试文章',
+  introduction: '测试发布文章',
+  images: 'www.baidu.com,www.qq.com',
+  create_time: 1703257872618,
+  edit_time: 1703257872618
+}
+
+[2023/12/22:23.15.53] ERROR file - TypeError: Cannot read properties of undefined (reading 'file')
+    at uploadToQiniu (F:\workspace\server-admin\src\routes\index.ts:57:41)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\src\middleware\jwt.ts:39:11
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:36:12
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\lib\router.js:351:31)
+
+[2023/12/22:23.23.54] ERROR file - TypeError: Cannot read properties of undefined (reading 'file')
+    at uploadToQiniu (F:\workspace\server-admin\src\routes\index.ts:57:41)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\src\middleware\jwt.ts:39:11
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:36:12
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\lib\router.js:351:31)
+
+[2023/12/22:23.24.08] ERROR file - Error: bad content-type header, no multipart boundary
+    at IncomingForm._parseContentType (F:\workspace\server-admin\node_modules\formidable\lib\incoming_form.js:279:19)
+    at IncomingForm.writeHeaders (F:\workspace\server-admin\node_modules\formidable\lib\incoming_form.js:144:8)
+    at IncomingForm.parse (F:\workspace\server-admin\node_modules\formidable\lib\incoming_form.js:112:8)
+    at F:\workspace\server-admin\node_modules\koa-body\index.js:209:10
+    at new Promise (<anonymous>)
+    at formy (F:\workspace\server-admin\node_modules\koa-body\index.js:174:10)
+    at F:\workspace\server-admin\node_modules\koa-body\index.js:101:25
+    at dispatch (F:\workspace\server-admin\node_modules\koa-compose\index.js:42:32)
+    at cors (F:\workspace\server-admin\node_modules\koa2-cors\dist\index.js:91:15)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-compose\index.js:42:32)
+
+[2023/12/22:23.37.55] INFO file - ====== execute sql ======
+
+[2023/12/22:23.37.55] INFO file - insert into article set ? {
+  title: '测试发布文章2',
+  type: '2',
+  tags: '股票,财经',
+  content: '![background.png](http://s62oumv7u.hn-bkt.clouddn.com/3bc56ceff98a4.png)\n' +
+    '测试文章\n' +
+    '测试图片上传',
+  introduction: '测试发布文章2',
+  images: undefined,
+  create_time: 1703259475717,
+  edit_time: 1703259475717
+}
+
+[2023/12/22:23.38.49] INFO file - ====== execute sql ======
+
+[2023/12/22:23.38.49] INFO file - insert into article set ? {
+  title: '测试发布文章3',
+  type: '2',
+  tags: '股票,财经',
+  content: '![background.png](http://s62oumv7u.hn-bkt.clouddn.com/d797bd7aeccd3.png)\n' +
+    ' 阿斯顿发生',
+  introduction: '测试发布文章3',
+  images: undefined,
+  create_time: 1703259529353,
+  edit_time: 1703259529353
+}
+
+[2023/12/22:23.40.14] INFO file - ====== execute sql ======
+
+[2023/12/22:23.40.14] INFO file - insert into article set ? {
+  title: '测试发布文章4',
+  type: '2',
+  tags: '股票,财经',
+  content: '![background.png](http://s62oumv7u.hn-bkt.clouddn.com/e33baf78e090b.png)\n' +
+    '\n' +
+    '**测试图片上穿**',
+  introduction: '测试发布文章4',
+  images: '',
+  create_time: 1703259614279,
+  edit_time: 1703259614279
+}
+
+[2023/12/23:00.16.25] INFO file - ====== execute sql ======
+
+[2023/12/23:00.16.25] INFO file - insert into article set ? {
+  title: '测试发布文章4',
+  type: '0',
+  tags: '股票,财经',
+  content: '![background.png](http://s62oumv7u.hn-bkt.clouddn.com/f7a0105b427de.png)\n' +
+    '\n' +
+    '上穿图片测试\n' +
+    '\n' +
+    '![bg.png](http://s62oumv7u.hn-bkt.clouddn.com/1c773d8418a2b.png)',
+  introduction: '测试发布文章4',
+  images: 'http://s62oumv7u.hn-bkt.clouddn.com/f7a0105b427de.png,http://s62oumv7u.hn-bkt.clouddn.com/1c773d8418a2b.png',
+  create_time: 1703261785428,
+  edit_time: 1703261785428
+}
+
+[2023/12/23:00.16.45] INFO file - ====== execute sql ======
+
+[2023/12/23:00.16.45] INFO file -  select count(*) as count from article
+
+[2023/12/23:00.16.45] INFO file - ====== execute sql ======
+
+[2023/12/23:00.16.45] INFO file -  select * from article order by create_time desc limit 0,10
+
+[2023/12/23:00.21.53] ERROR file - Error: bad content-type header, no multipart boundary
+    at IncomingForm._parseContentType (F:\workspace\server-admin\node_modules\formidable\lib\incoming_form.js:279:19)
+    at IncomingForm.writeHeaders (F:\workspace\server-admin\node_modules\formidable\lib\incoming_form.js:144:8)
+    at IncomingForm.parse (F:\workspace\server-admin\node_modules\formidable\lib\incoming_form.js:112:8)
+    at F:\workspace\server-admin\node_modules\koa-body\index.js:209:10
+    at new Promise (<anonymous>)
+    at formy (F:\workspace\server-admin\node_modules\koa-body\index.js:174:10)
+    at F:\workspace\server-admin\node_modules\koa-body\index.js:101:25
+    at dispatch (F:\workspace\server-admin\node_modules\koa-compose\index.js:42:32)
+    at cors (F:\workspace\server-admin\node_modules\koa2-cors\dist\index.js:91:15)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-compose\index.js:42:32)
+
+[2023/12/25:20.47.49] INFO file - creating pool
+
+[2023/12/25:20.47.51] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:20.47.55] INFO file - ====== execute sql ======
+
+[2023/12/25:20.47.55] INFO file - select count(*) as count from user where ? { email: 'longjia3713@163.com' }
+
+[2023/12/25:20.47.55] ERROR file - Error: ER_NO_SUCH_TABLE: Table 'autuforum.user' doesn't exist
+    at Query.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Protocol._enqueue (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:198:25)
+    at F:\workspace\server-admin\src\common\dbHelper.ts:46:15
+    at new Promise (<anonymous>)
+    at Object.count (F:\workspace\server-admin\src\common\dbHelper.ts:38:44)
+    at register (F:\workspace\server-admin\src\routes\sign.ts:47:32)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\src\middleware\jwt.ts:39:11
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32) {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlMessage: "Table 'autuforum.user' doesn't exist",
+  sqlState: '42S02',
+  index: 0,
+  sql: "select count(*) as count from user where `email` = 'longjia3713@163.com'"
+}
+
+[2023/12/25:20.54.37] INFO file - creating pool
+
+[2023/12/25:20.54.37] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:20.55.39] INFO file - ====== execute sql ======
+
+[2023/12/25:20.55.39] INFO file - select count(*) as count from user where ? { email: 'longjia3713@163.com' }
+
+[2023/12/25:20.55.39] INFO file - ====== execute sql ======
+
+[2023/12/25:20.55.39] INFO file - insert into user set ? {
+  id: '16395efd-a7b8-4eb2-b2f9-fdc696a14e4f',
+  salt: '87863311594',
+  hash_password: '084d723555e4df238644f48e3401c2c2',
+  email: 'longjia3713@163.com',
+  name: 'longjia3713@163.com',
+  nick: 'longjia3713@163.com'
+}
+
+[2023/12/25:20.55.39] ERROR file - Error: ER_BAD_FIELD_ERROR: Unknown column 'hash_password' in 'field list'
+    at Query.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Protocol._enqueue (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:198:25)
+    at F:\workspace\server-admin\src\common\dbHelper.ts:56:15
+    at new Promise (<anonymous>)
+    at Object.insert (F:\workspace\server-admin\src\common\dbHelper.ts:48:44)
+    at register (F:\workspace\server-admin\src\routes\sign.ts:56:33)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async F:\workspace\server-admin\src\middleware\jwt.ts:39:5
+    at async F:\workspace\server-admin\src\middleware\error.ts:9:5
+    at async F:\workspace\server-admin\src\middleware\tpl.ts:31:3 {
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: "Unknown column 'hash_password' in 'field list'",
+  sqlState: '42S22',
+  index: 0,
+  sql: "insert into user set `id` = '16395efd-a7b8-4eb2-b2f9-fdc696a14e4f', `salt` = '87863311594', `hash_password` = '084d723555e4df238644f48e3401c2c2', `email` = 'longjia3713@163.com', `name` = 'longjia3713@163.com', `nick` = 'longjia3713@163.com'"
+}
+
+[2023/12/25:20.56.13] INFO file - creating pool
+
+[2023/12/25:20.56.13] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:20.56.18] INFO file - ====== execute sql ======
+
+[2023/12/25:20.56.18] INFO file - select count(*) as count from user where ? { email: 'longjia3713@163.com' }
+
+[2023/12/25:20.56.18] INFO file - ====== execute sql ======
+
+[2023/12/25:20.56.18] INFO file - insert into user set ? {
+  id: '60e1bc3e-ecca-42c7-b0eb-8361d8b0df17',
+  salt: '1162379684867',
+  password: 'b890ecf4d5342787dd03e59f3173434f',
+  email: 'longjia3713@163.com',
+  name: 'longjia3713@163.com',
+  nick: 'longjia3713@163.com'
+}
+
+[2023/12/25:20.56.18] ERROR file - Error: ER_BAD_FIELD_ERROR: Unknown column 'password' in 'field list'
+    at Query.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Protocol._enqueue (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:198:25)
+    at F:\workspace\server-admin\src\common\dbHelper.ts:56:15
+    at new Promise (<anonymous>)
+    at Object.insert (F:\workspace\server-admin\src\common\dbHelper.ts:48:44)
+    at register (F:\workspace\server-admin\src\routes\sign.ts:56:33)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async F:\workspace\server-admin\src\middleware\jwt.ts:39:5
+    at async F:\workspace\server-admin\src\middleware\error.ts:9:5
+    at async F:\workspace\server-admin\src\middleware\tpl.ts:31:3 {
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: "Unknown column 'password' in 'field list'",
+  sqlState: '42S22',
+  index: 0,
+  sql: "insert into user set `id` = '60e1bc3e-ecca-42c7-b0eb-8361d8b0df17', `salt` = '1162379684867', `password` = 'b890ecf4d5342787dd03e59f3173434f', `email` = 'longjia3713@163.com', `name` = 'longjia3713@163.com', `nick` = 'longjia3713@163.com'"
+}
+
+[2023/12/25:20.56.55] INFO file - creating pool
+
+[2023/12/25:20.56.56] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:20.57.43] INFO file - creating pool
+
+[2023/12/25:20.57.44] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:20.57.55] INFO file - creating pool
+
+[2023/12/25:20.57.55] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:20.58.31] INFO file - creating pool
+
+[2023/12/25:20.58.31] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:20.58.38] INFO file - creating pool
+
+[2023/12/25:20.58.39] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:20.58.49] INFO file - ====== execute sql ======
+
+[2023/12/25:20.58.49] INFO file - select count(*) as count from user where ? { email: 'longjia3713@163.com' }
+
+[2023/12/25:20.58.49] INFO file - ====== execute sql ======
+
+[2023/12/25:20.58.49] INFO file - insert into user set ? {
+  id: '689eb021-381a-4a1b-88ab-d149676c085b',
+  salt: '1580575702223',
+  hash_password: 'bc7aae2fb60715cc210781af37c5d8ed',
+  email: 'longjia3713@163.com',
+  name: 'longjia3713@163.com',
+  nick: 'longjia3713@163.com'
+}
+
+[2023/12/25:20.58.49] ERROR file - Error: ER_BAD_FIELD_ERROR: Unknown column 'name' in 'field list'
+    at Query.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Protocol._enqueue (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:198:25)
+    at F:\workspace\server-admin\src\common\dbHelper.ts:56:15
+    at new Promise (<anonymous>)
+    at Object.insert (F:\workspace\server-admin\src\common\dbHelper.ts:48:44)
+    at register (F:\workspace\server-admin\src\routes\sign.ts:56:33)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async F:\workspace\server-admin\src\middleware\jwt.ts:39:5
+    at async F:\workspace\server-admin\src\middleware\error.ts:9:5
+    at async F:\workspace\server-admin\src\middleware\tpl.ts:31:3 {
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: "Unknown column 'name' in 'field list'",
+  sqlState: '42S22',
+  index: 0,
+  sql: "insert into user set `id` = '689eb021-381a-4a1b-88ab-d149676c085b', `salt` = '1580575702223', `hash_password` = 'bc7aae2fb60715cc210781af37c5d8ed', `email` = 'longjia3713@163.com', `name` = 'longjia3713@163.com', `nick` = 'longjia3713@163.com'"
+}
+
+[2023/12/25:20.59.03] INFO file - creating pool
+
+[2023/12/25:20.59.04] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:20.59.11] INFO file - creating pool
+
+[2023/12/25:20.59.12] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:20.59.19] INFO file - ====== execute sql ======
+
+[2023/12/25:20.59.19] INFO file - select count(*) as count from user where ? { email: 'longjia3713@163.com' }
+
+[2023/12/25:20.59.19] INFO file - ====== execute sql ======
+
+[2023/12/25:20.59.19] INFO file - insert into user set ? {
+  id: '224731c9-99c3-42f3-bbb4-1d76fcbfae09',
+  salt: '1262697830082',
+  hash_password: 'd20598ff2af47eb712ce759b7e3751c8',
+  email: 'longjia3713@163.com',
+  name: 'longjia3713@163.com',
+  nick: 'longjia3713@163.com'
+}
+
+[2023/12/25:20.59.19] ERROR file - Error: WARN_DATA_TRUNCATED: Data truncated for column 'id' at row 1
+    at Query.Sequence._packetToError (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Query.ErrorPacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\sequences\Query.js:79:18)
+    at Protocol._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    --------------------
+    at Protocol._enqueue (F:\workspace\server-admin\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at PoolConnection.query (F:\workspace\server-admin\node_modules\mysql\lib\Connection.js:198:25)
+    at F:\workspace\server-admin\src\common\dbHelper.ts:57:15
+    at new Promise (<anonymous>)
+    at Object.insert (F:\workspace\server-admin\src\common\dbHelper.ts:49:44)
+    at register (F:\workspace\server-admin\src\routes\sign.ts:56:33)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async F:\workspace\server-admin\src\middleware\jwt.ts:39:5
+    at async F:\workspace\server-admin\src\middleware\error.ts:9:5
+    at async F:\workspace\server-admin\src\middleware\tpl.ts:31:3 {
+  code: 'WARN_DATA_TRUNCATED',
+  errno: 1265,
+  sqlMessage: "Data truncated for column 'id' at row 1",
+  sqlState: '01000',
+  index: 0,
+  sql: "insert into user set `id` = '224731c9-99c3-42f3-bbb4-1d76fcbfae09', `salt` = '1262697830082', `hash_password` = 'd20598ff2af47eb712ce759b7e3751c8', `email` = 'longjia3713@163.com', `name` = 'longjia3713@163.com', `nick` = 'longjia3713@163.com'"
+}
+
+[2023/12/25:21.00.28] INFO file - creating pool
+
+[2023/12/25:21.00.28] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:21.00.36] INFO file - creating pool
+
+[2023/12/25:21.00.36] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:21.00.47] INFO file - ====== execute sql ======
+
+[2023/12/25:21.00.47] INFO file - select count(*) as count from user where ? { email: 'longjia3713@163.com' }
+
+[2023/12/25:21.00.47] INFO file - ====== execute sql ======
+
+[2023/12/25:21.00.47] INFO file - insert into user set ? {
+  id: '306eb8fe-7534-4a93-a222-af261224cc43',
+  salt: '14666171781',
+  hash_password: '7018ca41ae5be86732609c96353e7fb0',
+  email: 'longjia3713@163.com',
+  name: 'longjia3713@163.com',
+  nick: 'longjia3713@163.com'
+}
+
+[2023/12/25:21.01.12] INFO file - ====== execute sql ======
+
+[2023/12/25:21.01.12] INFO file - select * from user where ? { email: 'longjia3713@163.com' }
+
+[2023/12/25:21.12.34] INFO file - creating pool
+
+[2023/12/25:21.12.34] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:21.15.00] INFO file - creating pool
+
+[2023/12/25:21.15.00] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:21.15.07] INFO file - creating pool
+
+[2023/12/25:21.15.07] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:21.16.26] INFO file - creating pool
+
+[2023/12/25:21.16.26] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:21.16.39] INFO file - creating pool
+
+[2023/12/25:21.16.39] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:21.18.08] INFO file - creating pool
+
+[2023/12/25:21.18.08] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:21.18.23] INFO file - creating pool
+
+[2023/12/25:21.18.23] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:21.18.34] INFO file - creating pool
+
+[2023/12/25:21.18.34] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:21.19.30] INFO file - creating pool
+
+[2023/12/25:21.19.30] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:21.22.58] INFO file - creating pool
+
+[2023/12/25:21.22.58] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:21.23.11] INFO file - creating pool
+
+[2023/12/25:21.23.11] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:21.23.54] INFO file - creating pool
+
+[2023/12/25:21.23.55] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:21.24.06] INFO file - creating pool
+
+[2023/12/25:21.24.06] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:21.24.48] INFO file - creating pool
+
+[2023/12/25:21.24.48] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:21.25.04] INFO file - creating pool
+
+[2023/12/25:21.25.05] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:21.25.13] INFO file - creating pool
+
+[2023/12/25:21.25.13] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:21.25.39] INFO file - creating pool
+
+[2023/12/25:21.25.39] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:21.25.57] INFO file - creating pool
+
+[2023/12/25:21.25.58] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:21.26.32] INFO file - creating pool
+
+[2023/12/25:21.26.33] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:21.27.03] INFO file - creating pool
+
+[2023/12/25:21.27.04] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:21.27.22] INFO file - creating pool
+
+[2023/12/25:21.27.23] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:21.28.54] INFO file - creating pool
+
+[2023/12/25:21.28.54] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:21.29.15] INFO file - creating pool
+
+[2023/12/25:21.29.16] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:21.31.40] INFO file - creating pool
+
+[2023/12/25:21.31.41] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:21.32.45] INFO file - creating pool
+
+[2023/12/25:21.32.46] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:21.33.05] INFO file - creating pool
+
+[2023/12/25:21.33.05] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:21.33.14] INFO file - creating pool
+
+[2023/12/25:21.33.14] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:21.35.04] INFO file - creating pool
+
+[2023/12/25:21.35.04] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:21.35.11] INFO file - creating pool
+
+[2023/12/25:21.35.12] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:21.35.22] INFO file - creating pool
+
+[2023/12/25:21.35.22] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:21.35.40] INFO file - creating pool
+
+[2023/12/25:21.35.41] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:21.36.36] ERROR file - JsonWebTokenError: jwt malformed
+    at Object.module.exports [as verify] (F:\workspace\server-admin\node_modules\jsonwebtoken\verify.js:63:17)
+    at F:\workspace\server-admin\src\middleware\jwt.ts:24:46
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:36:12
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\lib\router.js:351:31)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-compose\index.js:42:32)
+    at F:\workspace\server-admin\src\middleware\error.ts:9:11 {
+  url: '/api/v1/check'
+}
+
+[2023/12/25:21.54.28] INFO file - ====== execute sql ======
+
+[2023/12/25:21.54.28] INFO file - select * from user where ? { email: 'longjia3713@163.com' }
+
+[2023/12/25:21.56.24] ERROR file - JsonWebTokenError: jwt malformed
+    at Object.module.exports [as verify] (F:\workspace\server-admin\node_modules\jsonwebtoken\verify.js:63:17)
+    at F:\workspace\server-admin\src\middleware\jwt.ts:24:46
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:36:12
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\lib\router.js:351:31)
+    at dispatch (F:\workspace\server-admin\node_modules\koa-compose\index.js:42:32)
+    at F:\workspace\server-admin\src\middleware\error.ts:9:11 {
+  url: '/api/v1/check'
+}
+
+[2023/12/25:21.56.40] INFO file - ====== execute sql ======
+
+[2023/12/25:21.56.40] INFO file -  select count(*) as count from article
+
+[2023/12/25:21.56.40] INFO file - ====== execute sql ======
+
+[2023/12/25:21.56.40] INFO file -  select * from article order by create_time desc limit 0,10
+
+[2023/12/25:21.56.50] INFO file - ====== execute sql ======
+
+[2023/12/25:21.56.50] INFO file - insert into article set ? {
+  title: 'test',
+  content: 'string',
+  introduction: 'string,sdfg',
+  tags: 'string,wertwer',
+  type: 1,
+  images: 'strig',
+  create_time: 1703512610187,
+  edit_time: 1703512610187
+}
+
+[2023/12/25:21.57.14] INFO file - creating pool
+
+[2023/12/25:21.57.15] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:21.57.16] INFO file - ====== execute sql ======
+
+[2023/12/25:21.57.16] INFO file - insert into article set ? {
+  title: 'test',
+  content: 'string',
+  introduction: 'string,sdfg',
+  tags: 'string,wertwer',
+  type: 1,
+  images: 'strig',
+  create_time: 1703512636061,
+  edit_time: 1703512636061
+}
+
+[2023/12/25:21.57.22] INFO file - creating pool
+
+[2023/12/25:21.57.22] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:21.57.24] INFO file - ====== execute sql ======
+
+[2023/12/25:21.57.24] INFO file - insert into article set ? {
+  title: 'test',
+  content: 'string',
+  introduction: 'string,sdfg',
+  tags: 'string,wertwer',
+  type: 1,
+  images: 'strig',
+  create_time: 1703512644953,
+  edit_time: 1703512644953
+}
+
+[2023/12/25:21.58.11] INFO file - creating pool
+
+[2023/12/25:21.58.11] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:21.58.12] INFO file - ====== execute sql ======
+
+[2023/12/25:21.58.12] INFO file - insert into article set ? {
+  title: 'test',
+  content: 'string',
+  introduction: 'string,sdfg',
+  tags: 'string,wertwer',
+  type: 1,
+  images: 'strig',
+  create_time: 1703512692554,
+  edit_time: 1703512692554
+}
+
+[2023/12/25:21.58.40] INFO file - creating pool
+
+[2023/12/25:21.58.40] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:21.58.47] INFO file - creating pool
+
+[2023/12/25:21.58.47] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:21.58.50] INFO file - ====== execute sql ======
+
+[2023/12/25:21.58.50] INFO file - insert into article set ? {
+  title: 'test',
+  content: 'string',
+  introduction: 'string,sdfg',
+  tags: 'string,wertwer',
+  type: 1,
+  images: 'strig',
+  create_time: 1703512730432,
+  edit_time: 1703512730432
+}
+
+[2023/12/25:22.00.54] INFO file - creating pool
+
+[2023/12/25:22.00.54] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:22.01.12] INFO file - creating pool
+
+[2023/12/25:22.01.13] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:22.01.51] INFO file - creating pool
+
+[2023/12/25:22.01.51] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:22.02.30] INFO file - creating pool
+
+[2023/12/25:22.02.30] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:22.02.52] INFO file - creating pool
+
+[2023/12/25:22.02.52] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:23.06.58] ERROR file - 404 Not Found : http://localhost:8080/api/v1/api/v1/admmin/login?username=asdf&password=asdf&remember=true
+
+[2023/12/25:23.07.29] ERROR file - 404 Not Found : http://localhost:8080/api/v1/admmin/login?username=asdf&password=asdf&remember=true
+
+[2023/12/25:23.07.47] INFO file - ====== execute sql ======
+
+[2023/12/25:23.07.47] INFO file - select * from user where ? { email: undefined }
+
+[2023/12/25:23.08.19] INFO file - ====== execute sql ======
+
+[2023/12/25:23.08.19] INFO file - select * from user where ? { email: undefined }
+
+[2023/12/25:23.09.00] INFO file - ====== execute sql ======
+
+[2023/12/25:23.09.00] INFO file - select count(*) as count from user where ? { email: 'longjia3713@163.com' }
+
+[2023/12/25:23.09.15] INFO file - ====== execute sql ======
+
+[2023/12/25:23.09.15] INFO file - select * from user where ? { email: undefined }
+
+[2023/12/25:23.11.11] INFO file - creating pool
+
+[2023/12/25:23.11.11] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:23.11.18] INFO file - ====== execute sql ======
+
+[2023/12/25:23.11.18] INFO file - select * from user where ? { email: undefined }
+
+[2023/12/25:23.11.27] INFO file - creating pool
+
+[2023/12/25:23.11.28] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:23.14.52] INFO file - ====== execute sql ======
+
+[2023/12/25:23.14.52] INFO file - select * from user where ? { email: undefined }
+
+[2023/12/25:23.15.55] INFO file - ====== execute sql ======
+
+[2023/12/25:23.15.55] INFO file - select * from user where ? { email: undefined }
+
+[2023/12/25:23.16.30] INFO file - ====== execute sql ======
+
+[2023/12/25:23.16.30] INFO file - select * from user where ? { email: undefined }
+
+[2023/12/25:23.16.59] INFO file - creating pool
+
+[2023/12/25:23.16.59] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:23.17.15] INFO file - creating pool
+
+[2023/12/25:23.17.15] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:23.17.21] INFO file - creating pool
+
+[2023/12/25:23.17.21] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:23.17.23] INFO file - ====== execute sql ======
+
+[2023/12/25:23.17.23] INFO file - select * from user where ? { email: undefined }
+
+[2023/12/25:23.17.39] INFO file - creating pool
+
+[2023/12/25:23.17.39] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:23.17.46] INFO file - ====== execute sql ======
+
+[2023/12/25:23.17.46] INFO file - select * from user where ? { email: undefined }
+
+[2023/12/25:23.18.41] INFO file - ====== execute sql ======
+
+[2023/12/25:23.18.41] INFO file - select * from user where ? { email: 'longjia3713@163.com' }
+
+[2023/12/25:23.19.12] ERROR file - SyntaxError: Unexpected token  in JSON at position 26
+    at JSON.parse (<anonymous>)
+    at Object.jwsDecode [as decode] (F:\workspace\server-admin\node_modules\jws\lib\verify-stream.js:71:20)
+    at module.exports (F:\workspace\server-admin\node_modules\jsonwebtoken\decode.js:5:21)
+    at Object.module.exports [as verify] (F:\workspace\server-admin\node_modules\jsonwebtoken\verify.js:69:20)
+    at F:\workspace\server-admin\src\middleware\jwt.ts:25:46
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:36:12 {
+  url: '/api/v1/check'
+}
+
+[2023/12/25:23.28.22] INFO file - creating pool
+
+[2023/12/25:23.28.23] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:23.28.27] ERROR file - SyntaxError: Unexpected token  in JSON at position 26
+    at JSON.parse (<anonymous>)
+    at Object.jwsDecode [as decode] (F:\workspace\server-admin\node_modules\jws\lib\verify-stream.js:71:20)
+    at module.exports (F:\workspace\server-admin\node_modules\jsonwebtoken\decode.js:5:21)
+    at Object.module.exports [as verify] (F:\workspace\server-admin\node_modules\jsonwebtoken\verify.js:69:20)
+    at F:\workspace\server-admin\src\middleware\jwt.ts:25:40
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at F:\workspace\server-admin\node_modules\koa-router\lib\router.js:346:16
+    at dispatch (F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at F:\workspace\server-admin\node_modules\koa-router\node_modules\koa-compose\index.js:36:12 {
+  url: '/api/v1/check'
+}
+
+[2023/12/25:23.29.06] INFO file - creating pool
+
+[2023/12/25:23.29.07] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:23.29.56] INFO file - creating pool
+
+[2023/12/25:23.29.57] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:23.30.15] ERROR file - 404 Not Found : http://localhost:8080/api/v1/user/info
+
+[2023/12/25:23.30.28] ERROR file - 404 Not Found : http://localhost:8080/api/v1/admin/user/info
+
+[2023/12/25:23.30.33] ERROR file - 404 Not Found : http://localhost:8080/api/v1/admin/user/info
+
+[2023/12/25:23.30.42] INFO file - creating pool
+
+[2023/12/25:23.30.42] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:23.31.03] INFO file - creating pool
+
+[2023/12/25:23.31.03] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:23.31.06] ERROR file - 404 Not Found : http://localhost:8080/api/v1/admin/userinfo
+
+[2023/12/25:23.32.08] INFO file - creating pool
+
+[2023/12/25:23.32.08] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:23.32.51] ERROR file - 404 Not Found : http://localhost:8080/api/v1/admin/user/info
+
+[2023/12/25:23.33.00] INFO file - creating pool
+
+[2023/12/25:23.33.01] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:23.35.08] INFO file - creating pool
+
+[2023/12/25:23.35.08] INFO file - === app server running on port 8080 ===
+
+[2023/12/25:23.42.37] INFO file - ====== execute sql ======
+
+[2023/12/25:23.42.37] INFO file - select * from user where ? { email: 'longjia3713@163.com' }
+
+[2023/12/25:23.50.29] INFO file - ====== execute sql ======
+
+[2023/12/25:23.50.29] INFO file - select * from user where ? { email: 'longjia3713@163.com' }
+
+[2023/12/25:23.51.00] INFO file - ====== execute sql ======
+
+[2023/12/25:23.51.00] INFO file - select * from user where ? { email: 'longjia3713@163.com' }
+
+[2023/12/25:23.52.49] INFO file - ====== execute sql ======
+
+[2023/12/25:23.52.49] INFO file - select * from user where ? { email: 'longjia3713@163.com' }
+
+[2023/12/25:23.54.05] INFO file - ====== execute sql ======
+
+[2023/12/25:23.54.05] INFO file - select * from user where ? { email: 'longjia3713@163.com' }
+
+[2023/12/25:23.54.46] INFO file - ====== execute sql ======
+
+[2023/12/25:23.54.46] INFO file - select * from user where ? { email: 'longjia3713@163.com' }
+
+[2023/12/25:23.54.56] INFO file - ====== execute sql ======
+
+[2023/12/25:23.54.56] INFO file - select * from user where ? { email: 'longjia3713@163.com' }
+
+[2023/12/26:21.09.07] INFO file - creating pool
+
+[2023/12/26:21.09.09] INFO file - === app server running on port 8080 ===
+
+[2023/12/26:21.21.37] INFO file - creating pool
+
+[2023/12/26:21.21.38] INFO file - === app server running on port 8080 ===
+
+[2023/12/26:21.21.42] ERROR file - 404 Not Found : http://localhost:8080/api/v1/admin/login
+
+[2023/12/26:21.22.12] ERROR file - 404 Not Found : http://localhost:8080/api/v1/admin/login
+
+[2023/12/26:21.22.32] INFO file - ====== execute sql ======
+
+[2023/12/26:21.22.32] INFO file - select count(*) as count from user where ? { email: 'longjia3713@163.com' }
+
+[2023/12/26:21.22.43] ERROR file - 404 Not Found : http://localhost:8080/api/v1/admin/login
+
+[2023/12/26:21.22.59] INFO file - ====== execute sql ======
+
+[2023/12/26:21.22.59] INFO file - select * from user where ? { email: 'longjia3713@163.com' }
+
+[2023/12/26:21.23.27] INFO file - creating pool
+
+[2023/12/26:21.23.28] INFO file - === app server running on port 8080 ===
+
+[2023/12/26:21.23.31] INFO file - ====== execute sql ======
+
+[2023/12/26:21.23.31] INFO file - select * from user where ? { email: 'longjia3713@163.com' }
+
+[2023/12/26:21.23.52] INFO file - creating pool
+
+[2023/12/26:21.23.52] INFO file - === app server running on port 8080 ===
+
+[2023/12/26:21.23.55] INFO file - ====== execute sql ======
+
+[2023/12/26:21.23.55] INFO file - select * from user where ? { email: 'longjia3713@163.com' }
+
+[2023/12/26:21.25.02] INFO file - creating pool
+
+[2023/12/26:21.25.02] INFO file - === app server running on port 8080 ===
+
+[2023/12/26:21.25.13] INFO file - creating pool
+
+[2023/12/26:21.25.14] INFO file - === app server running on port 8080 ===
+
+[2023/12/26:21.25.14] INFO file - ====== execute sql ======
+
+[2023/12/26:21.25.14] INFO file - select * from user where ? { email: 'longjia3713@163.com' }
+
+[2023/12/26:21.25.35] INFO file - creating pool
+
+[2023/12/26:21.25.35] INFO file - === app server running on port 8080 ===
+
+[2023/12/26:21.26.37] INFO file - creating pool
+
+[2023/12/26:21.26.38] INFO file - === app server running on port 8080 ===
+
+[2023/12/26:21.26.41] INFO file - ====== execute sql ======
+
+[2023/12/26:21.26.41] INFO file - select * from user where ? { email: 'longjia3713@163.com' }
+
+[2023/12/26:21.26.54] INFO file - creating pool
+
+[2023/12/26:21.26.54] INFO file - === app server running on port 8080 ===
+
+[2023/12/26:21.27.39] INFO file - creating pool
+
+[2023/12/26:21.27.39] INFO file - === app server running on port 8080 ===
+
+[2023/12/26:21.27.49] INFO file - creating pool
+
+[2023/12/26:21.27.50] INFO file - === app server running on port 8080 ===
+
+[2023/12/26:21.27.51] INFO file - ====== execute sql ======
+
+[2023/12/26:21.27.51] INFO file - select * from user where ? { email: 'longjia3713@163.com' }
+
+[2023/12/26:21.28.22] ERROR file - 404 Not Found : http://localhost:8080/api/v1/api/v1/queryUserList?token%20=%20123&current=1&pageSize=20&sorter=%7B%7D&filter=%7B%7D
+
+[2023/12/26:21.28.24] ERROR file - 404 Not Found : http://localhost:8080/api/v1/api/v1/queryUserList?token%20=%20123&current=1&pageSize=20&sorter=%7B%7D&filter=%7B%7D
+
+[2023/12/26:21.28.27] ERROR file - 404 Not Found : http://localhost:8080/api/v1/api/v1/queryUserList?token%20=%20123&current=1&pageSize=20&sorter=%7B%7D&filter=%7B%7D
+
+[2023/12/26:21.29.28] ERROR file - 404 Not Found : http://localhost:8080/api/v1/api/v1/queryUserList?token%20=%20123&current=1&pageSize=20&sorter=%7B%7D&filter=%7B%7D
+
+[2023/12/26:21.29.35] INFO file - ====== execute sql ======
+
+[2023/12/26:21.29.35] INFO file - select * from user where ? { email: 'longjia3713@163.com' }
+
+[2023/12/26:21.29.58] INFO file - ====== execute sql ======
+
+[2023/12/26:21.29.58] INFO file - select * from user where ? { email: 'longjia3713@163.com' }
+
+[2023/12/26:21.36.46] INFO file - creating pool
+
+[2023/12/26:21.36.46] INFO file - === app server running on port 8080 ===
+
+[2023/12/26:21.36.58] INFO file - creating pool
+
+[2023/12/26:21.36.59] INFO file - === app server running on port 8080 ===
+
+[2023/12/26:21.37.15] INFO file - ====== execute sql ======
+
+[2023/12/26:21.37.15] INFO file - select * from user where ? { email: 'longjia3713@163.com' }
+
+[2023/12/26:21.37.36] INFO file - creating pool
+
+[2023/12/26:21.37.36] INFO file - === app server running on port 8080 ===
+
+[2023/12/26:21.38.33] INFO file - ====== execute sql ======
+
+[2023/12/26:21.38.33] INFO file - select * from user where ? { email: 'longjia3713@163.com' }
+
+[2023/12/26:21.42.29] INFO file - ====== execute sql ======
+
+[2023/12/26:21.42.29] INFO file - select * from user where ? { id: '306eb8fe-7534-4a93-a222-af261224cc43' }
+

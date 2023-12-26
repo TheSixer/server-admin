@@ -9,10 +9,9 @@ const createDb = () => {
   getConnection(async (connection: any) => {
     pool = connection;
     // 检查是否存在数据库，如果不存在则创建
-    await connection.query(`CREATE DATABASE IF NOT EXISTS ${process.env.NODE_ENV === 'development' ? 'blogdb' : 'coinPay'} CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci`);
+    await connection.query('CREATE DATABASE IF NOT EXISTS autuforum CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci');
     // 切换到新创建的数据库
-    await connection?.query(`USE ${process.env.NODE_ENV === 'development' ? 'blogdb' : 'coinPay'}`);
-
+    await connection?.query('USE autuforum');
     // 检查是否存在表，如果不存在则创建
     await connection?.query(`
       CREATE TABLE IF NOT EXISTS article (
@@ -28,6 +27,17 @@ const createDb = () => {
         comment_count INT,
         create_time BIGINT,
         edit_time BIGINT
+      )
+    `);
+    // 检查是否存在表，如果不存在则创建
+    await connection?.query(`
+      CREATE TABLE IF NOT EXISTS user (
+        id VARCHAR(255) PRIMARY KEY,
+        salt VARCHAR(255),
+        email VARCHAR(255),
+        hash_password VARCHAR(255),
+        name VARCHAR(255),
+        nick VARCHAR(255)
       )
     `);
   })
