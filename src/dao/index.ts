@@ -21,6 +21,8 @@ export const del: (arg: PlainObject) => Promise<MysqlResult> = querySql('delete 
 export const newArticle: (arg: PlainObject) => Promise<MysqlResult> = querySql('insert into article set ?')
 export const getArticleCount: (arg: string) => Promise<MysqlResult> = querySql()
 export const getArticle: (arg: string) => Promise<Art.Article[]> = querySql()
+export const getArticleDetail: (arg: PlainObject) => Promise<Art.Article[]> = querySql('select * from article where ?')
+export const varifyToken: (arg: string) => Promise<number> = querySql()
 // export const getArticleCount: (arg: string) => Promise<Art.Article[]> = querySql(`
 //   CREATE TABLE IF NOT EXISTS article (
 //     id INT AUTO_INCREMENT PRIMARY KEY,

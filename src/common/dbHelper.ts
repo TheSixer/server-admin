@@ -9,9 +9,9 @@ const createDb = () => {
   getConnection(async (connection: any) => {
     pool = connection;
     // 检查是否存在数据库，如果不存在则创建
-    await connection.query('CREATE DATABASE IF NOT EXISTS autuforum CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci');
+    await connection.query('CREATE DATABASE IF NOT EXISTS easy_traders CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci');
     // 切换到新创建的数据库
-    await connection?.query('USE autuforum');
+    await connection?.query('USE easy_traders');
     // 检查是否存在表，如果不存在则创建
     await connection?.query(`
       CREATE TABLE IF NOT EXISTS article (
@@ -28,6 +28,18 @@ const createDb = () => {
         create_time BIGINT,
         edit_time BIGINT
       )
+    `);
+    await connection?.query(`
+      CREATE TABLE IF NOT EXISTS traders (
+        id bigint NOT NULL,
+        email varchar(255) NOT NULL DEFAULT '',
+        starttime bigint NOT NULL,
+        endtime bigint NOT NULL,
+        token char(40) NOT NULL,
+        nickname varchar(255) NULL,
+        remark text NULL,
+        PRIMARY KEY (id)
+      ) ENGINE = InnoDB DEFAULT CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = 'traders' ROW_FORMAT = COMPACT;
     `);
     // 检查是否存在表，如果不存在则创建
     await connection?.query(`

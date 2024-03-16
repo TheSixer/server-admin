@@ -1,1 +1,1 @@
-export const prefix = '/forum-api/v1';
+export const prefix = '/trader-api/v1';

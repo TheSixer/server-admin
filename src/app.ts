@@ -19,11 +19,9 @@ const router = new koaRouter({ prefix: PREFIX });
 const baseDir = path.normalize(__dirname + '/..')
 
 app.use(cors({
-  origin: function () {
-    return "*"; // 允许来自所有域名请求
-  },
+  origin: "http://localhost:3000",
   exposeHeaders: ['WWW-Authenticate', 'Server-Authorization'],
-  maxAge: 5,
+  maxAge: 86400,
   credentials: true,
   allowMethods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowHeaders: ['Content-Type', 'Authorization', 'Accept'],

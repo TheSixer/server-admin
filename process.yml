@@ -10,15 +10,27 @@ apps:
     cron_restart: '0 1 * * * '
     exec_mode: 'cluster'
     instances: 1
+    # env:
+    #   PORT: 3000
+    #   NODE_ENV: development
+    #   DB_HOST: 'rm-cn-o493j8lce0002mvo.rwlb.rds.aliyuncs.com'
+    #   DB_USER: 'autu'
+    #   DB_PWD: 'Longjia3713'
+    # env_production:
+    #   PORT: 3000
+    #   NODE_ENV: production
+    #   DB_HOST: 'coin-pay-db-prod.cuvdo49gxg4c.ap-southeast-2.rds.amazonaws.com'
+    #   DB_USER: 'admin'
+    #   DB_PWD: 'Autu_2022_2022'
     env:
-      PORT: 8080
+      PORT: 3000
       NODE_ENV: development
-      DB_HOST: 'rm-cn-o493j8lce0002mvo.rwlb.rds.aliyuncs.com'
-      DB_USER: 'autu'
-      DB_PWD: 'Longjia3713'
+      DB_HOST: 'pc-uf6x0836drr1hjg39.rwlb.rds.aliyuncs.com'
+      DB_USER: 'trader'
+      DB_PWD: 'Longjia@3713'
     env_production:
-      PORT: 8080
+      PORT: 3000
       NODE_ENV: production
-      DB_HOST: 'coin-pay-db-prod.cuvdo49gxg4c.ap-southeast-2.rds.amazonaws.com'
-      DB_USER: 'admin'
-      DB_PWD: 'Autu_2022_2022'
+      DB_HOST: 'pc-uf6x0836drr1hjg39.rwlb.rds.aliyuncs.com'
+      DB_USER: 'trader'
+      DB_PWD: 'Longjia@3713'

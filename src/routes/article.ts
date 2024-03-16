@@ -11,8 +11,8 @@ export default class Sign {
   @post('/new', true)
   async register(ctx: Context) {
     const params = cloneDeep(ctx.request.body);
-    params.tags = params.tags;
-    params.images = params.images;
+    // params.tags = params.tags;
+    // params.images = params.images;
     params.create_time = new Date().getTime();
     params.edit_time = params.create_time;
     const insertRet = await dao.newArticle(params);
@@ -51,6 +51,25 @@ export default class Sign {
         rows: res.map((item: Art.Article) => objCamelCase(item)),
         total: result[0].count
       },
+      msg: 'success'
+    }
+  }
+
+  @get('/detail')
+  async getArticleDetail(ctx: Context) {
+    // const query, { start, limit } = ctx.request.query;
+    const query = ctx.request.query;
+    const id = query.id || null;
+    const res = await dao.getArticleDetail({ id });
+    if (!res.length) {
+      return ctx.body = {
+        code: -1,
+        msg: 'article is not found'
+      }
+    }
+    return ctx.body = {
+      code: 0,
+      data: res.map((item: Art.Article) => objCamelCase(item))[0],
       msg: 'success'
     }
   }

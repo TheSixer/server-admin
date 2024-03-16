@@ -1,0 +1,165 @@
+Error: Cannot find module 'F:\workspace\server-admin\dist\app.js'
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1028:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:873:27)
+    at E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\lib\ProcessContainer.js:304:25
+    at wrapper (E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\node_modules\async\internal\once.js:12:16)
+    at next (E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\node_modules\async\waterfall.js:96:20)
+    at E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\node_modules\async\internal\onlyOnce.js:12:16
+    at WriteStream.<anonymous> (E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\lib\Utility.js:186:13)
+    at WriteStream.emit (node:events:513:28)
+    at node:internal/fs/streams:75:16
+    at FSReqCallback.oncomplete (node:fs:192:23)
+Error: Cannot find module 'F:\workspace\server-admin\dist\app.js'
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1028:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:873:27)
+    at E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\lib\ProcessContainer.js:304:25
+    at wrapper (E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\node_modules\async\internal\once.js:12:16)
+    at next (E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\node_modules\async\waterfall.js:96:20)
+    at E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\node_modules\async\internal\onlyOnce.js:12:16
+    at WriteStream.<anonymous> (E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\lib\Utility.js:186:13)
+    at WriteStream.emit (node:events:513:28)
+    at node:internal/fs/streams:75:16
+    at FSReqCallback.oncomplete (node:fs:192:23)
+Error: Cannot find module 'F:\workspace\server-admin\dist\app.js'
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1028:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:873:27)
+    at E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\lib\ProcessContainer.js:304:25
+    at wrapper (E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\node_modules\async\internal\once.js:12:16)
+    at next (E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\node_modules\async\waterfall.js:96:20)
+    at E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\node_modules\async\internal\onlyOnce.js:12:16
+    at WriteStream.<anonymous> (E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\lib\Utility.js:186:13)
+    at WriteStream.emit (node:events:513:28)
+    at node:internal/fs/streams:75:16
+    at FSReqCallback.oncomplete (node:fs:192:23)
+Error: Cannot find module 'F:\workspace\server-admin\dist\app.js'
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1028:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:873:27)
+    at E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\lib\ProcessContainer.js:304:25
+    at wrapper (E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\node_modules\async\internal\once.js:12:16)
+    at next (E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\node_modules\async\waterfall.js:96:20)
+    at E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\node_modules\async\internal\onlyOnce.js:12:16
+    at WriteStream.<anonymous> (E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\lib\Utility.js:186:13)
+    at WriteStream.emit (node:events:513:28)
+    at node:internal/fs/streams:75:16
+    at FSReqCallback.oncomplete (node:fs:192:23)
+Error: Cannot find module 'F:\workspace\server-admin\dist\app.js'
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1028:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:873:27)
+    at E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\lib\ProcessContainer.js:304:25
+    at wrapper (E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\node_modules\async\internal\once.js:12:16)
+    at next (E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\node_modules\async\waterfall.js:96:20)
+    at E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\node_modules\async\internal\onlyOnce.js:12:16
+    at WriteStream.<anonymous> (E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\lib\Utility.js:186:13)
+    at WriteStream.emit (node:events:513:28)
+    at node:internal/fs/streams:75:16
+    at FSReqCallback.oncomplete (node:fs:192:23)
+Error: Cannot find module 'F:\workspace\server-admin\dist\app.js'
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1028:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:873:27)
+    at E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\lib\ProcessContainer.js:304:25
+    at wrapper (E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\node_modules\async\internal\once.js:12:16)
+    at next (E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\node_modules\async\waterfall.js:96:20)
+    at E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\node_modules\async\internal\onlyOnce.js:12:16
+    at WriteStream.<anonymous> (E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\lib\Utility.js:186:13)
+    at WriteStream.emit (node:events:513:28)
+    at node:internal/fs/streams:75:16
+    at FSReqCallback.oncomplete (node:fs:192:23)
+Error: Cannot find module 'F:\workspace\server-admin\dist\app.js'
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1028:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:873:27)
+    at E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\lib\ProcessContainer.js:304:25
+    at wrapper (E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\node_modules\async\internal\once.js:12:16)
+    at next (E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\node_modules\async\waterfall.js:96:20)
+    at E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\node_modules\async\internal\onlyOnce.js:12:16
+    at WriteStream.<anonymous> (E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\lib\Utility.js:186:13)
+    at WriteStream.emit (node:events:513:28)
+    at node:internal/fs/streams:75:16
+    at FSReqCallback.oncomplete (node:fs:192:23)
+Error: Cannot find module 'F:\workspace\server-admin\dist\app.js'
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1028:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:873:27)
+    at E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\lib\ProcessContainer.js:304:25
+    at wrapper (E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\node_modules\async\internal\once.js:12:16)
+    at next (E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\node_modules\async\waterfall.js:96:20)
+    at E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\node_modules\async\internal\onlyOnce.js:12:16
+    at WriteStream.<anonymous> (E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\lib\Utility.js:186:13)
+    at WriteStream.emit (node:events:513:28)
+    at node:internal/fs/streams:75:16
+    at FSReqCallback.oncomplete (node:fs:192:23)
+Error: Cannot find module 'F:\workspace\server-admin\dist\app.js'
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1028:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:873:27)
+    at E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\lib\ProcessContainer.js:304:25
+    at wrapper (E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\node_modules\async\internal\once.js:12:16)
+    at next (E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\node_modules\async\waterfall.js:96:20)
+    at E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\node_modules\async\internal\onlyOnce.js:12:16
+    at WriteStream.<anonymous> (E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\lib\Utility.js:186:13)
+    at WriteStream.emit (node:events:513:28)
+    at node:internal/fs/streams:75:16
+    at FSReqCallback.oncomplete (node:fs:192:23)
+Error: Cannot find module 'F:\workspace\server-admin\dist\app.js'
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1028:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:873:27)
+    at E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\lib\ProcessContainer.js:304:25
+    at wrapper (E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\node_modules\async\internal\once.js:12:16)
+    at next (E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\node_modules\async\waterfall.js:96:20)
+    at E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\node_modules\async\internal\onlyOnce.js:12:16
+    at WriteStream.<anonymous> (E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\lib\Utility.js:186:13)
+    at WriteStream.emit (node:events:513:28)
+    at node:internal/fs/streams:75:16
+    at FSReqCallback.oncomplete (node:fs:192:23)
+Error: Cannot find module 'F:\workspace\server-admin\dist\app.js'
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1028:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:873:27)
+    at E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\lib\ProcessContainer.js:304:25
+    at wrapper (E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\node_modules\async\internal\once.js:12:16)
+    at next (E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\node_modules\async\waterfall.js:96:20)
+    at E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\node_modules\async\internal\onlyOnce.js:12:16
+    at WriteStream.<anonymous> (E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\lib\Utility.js:186:13)
+    at WriteStream.emit (node:events:513:28)
+    at node:internal/fs/streams:75:16
+    at FSReqCallback.oncomplete (node:fs:192:23)
+Error: Cannot find module 'F:\workspace\server-admin\dist\app.js'
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1028:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:873:27)
+    at E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\lib\ProcessContainer.js:304:25
+    at wrapper (E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\node_modules\async\internal\once.js:12:16)
+    at next (E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\node_modules\async\waterfall.js:96:20)
+    at E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\node_modules\async\internal\onlyOnce.js:12:16
+    at WriteStream.<anonymous> (E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\lib\Utility.js:186:13)
+    at WriteStream.emit (node:events:513:28)
+    at node:internal/fs/streams:75:16
+    at FSReqCallback.oncomplete (node:fs:192:23)
+Error: Cannot find module 'F:\workspace\server-admin\dist\app.js'
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1028:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:873:27)
+    at E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\lib\ProcessContainer.js:304:25
+    at wrapper (E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\node_modules\async\internal\once.js:12:16)
+    at next (E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\node_modules\async\waterfall.js:96:20)
+    at E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\node_modules\async\internal\onlyOnce.js:12:16
+    at WriteStream.<anonymous> (E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\lib\Utility.js:186:13)
+    at WriteStream.emit (node:events:513:28)
+    at node:internal/fs/streams:75:16
+    at FSReqCallback.oncomplete (node:fs:192:23)
+Error: Cannot find module 'F:\workspace\server-admin\dist\app.js'
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1028:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:873:27)
+    at E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\lib\ProcessContainer.js:304:25
+    at wrapper (E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\node_modules\async\internal\once.js:12:16)
+    at next (E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\node_modules\async\waterfall.js:96:20)
+    at E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\node_modules\async\internal\onlyOnce.js:12:16
+    at WriteStream.<anonymous> (E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\lib\Utility.js:186:13)
+    at WriteStream.emit (node:events:513:28)
+    at node:internal/fs/streams:75:16
+    at FSReqCallback.oncomplete (node:fs:192:23)
+Error: Cannot find module 'F:\workspace\server-admin\dist\app.js'
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1028:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:873:27)
+    at E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\lib\ProcessContainer.js:304:25
+    at wrapper (E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\node_modules\async\internal\once.js:12:16)
+    at next (E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\node_modules\async\waterfall.js:96:20)
+    at E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\node_modules\async\internal\onlyOnce.js:12:16
+    at WriteStream.<anonymous> (E:\Program Files\Nvm\nvm\v16.20.2\node_modules\pm2\lib\Utility.js:186:13)
+    at WriteStream.emit (node:events:513:28)
+    at node:internal/fs/streams:75:16
+    at FSReqCallback.oncomplete (node:fs:192:23)
