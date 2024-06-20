@@ -9,9 +9,9 @@ const createDb = () => {
   getConnection(async (connection: any) => {
     pool = connection;
     // 检查是否存在数据库，如果不存在则创建
-    await connection.query('CREATE DATABASE IF NOT EXISTS easy_traders CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci');
+    await connection.query('CREATE DATABASE IF NOT EXISTS traders CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci');
     // 切换到新创建的数据库
-    await connection?.query('USE easy_traders');
+    await connection?.query('USE traders');
     // 检查是否存在表，如果不存在则创建
     await connection?.query(`
       CREATE TABLE IF NOT EXISTS article (

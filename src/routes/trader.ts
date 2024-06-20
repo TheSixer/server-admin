@@ -15,7 +15,7 @@ export default class Sign {
 
     return ctx.body = {
       code: 0,
-      data: result?.[0]?.end_time > new Date().getTime(),
+      data: result?.[0]?.endtime > new Date().getTime(),
       msg: 'success'
     }
   }
