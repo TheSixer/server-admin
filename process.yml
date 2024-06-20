@@ -23,14 +23,14 @@ apps:
     #   DB_USER: 'admin'
     #   DB_PWD: 'Autu_2022_2022'
     env:
-      PORT: 3000
+      PORT: 3010
       NODE_ENV: development
-      DB_HOST: 'pc-uf6x0836drr1hjg39.rwlb.rds.aliyuncs.com'
+      DB_HOST: 'pc-uf6x0836drr1hjg40.rwlb.rds.aliyuncs.com'
       DB_USER: 'trader'
-      DB_PWD: 'Longjia@3713'
+      DB_PWD: 'Admin123'
     env_production:
-      PORT: 3000
+      PORT: 3010
       NODE_ENV: production
-      DB_HOST: 'pc-uf6x0836drr1hjg39.rwlb.rds.aliyuncs.com'
+      DB_HOST: 'pc-uf6x0836drr1hjg40.rwlb.rds.aliyuncs.com'
       DB_USER: 'trader'
-      DB_PWD: 'Longjia@3713'
+      DB_PWD: 'Admin123'
